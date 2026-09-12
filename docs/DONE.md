@@ -2,6 +2,18 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-09-12 — Footer on small screens
+
+- What: Footer is now brand + a three-column link row (Explore / Site / Connect). On a phone the name sits above the links instead of one long stacked list. Terms label shortened to fit the column.
+- Files: `src/components/Layout.jsx`, `src/index.css`
+- Result: Footer links stay scannable at 320–640px with 44px tap targets.
+
+## 2026-09-12 — Tone pass: official, not cheap
+
+- What: Removed the Mandal line from the footer (studio stays on `/credits/` only). Dropped photo cards that were not from the awards they sat under. Recognition is now a sourced list. Cut inauguration / ribbon / “collab” / “bookings desk” wording. Quieter enquiry copy on Work and About.
+- Files: `src/components/Layout.jsx`, `src/components/ContactBand.jsx`, `src/pages/About.jsx`, `src/pages/Work.jsx`, `src/pages/Credits.jsx`, `src/pages/Terms.jsx`, `src/data.js`, `src/index.css`, `.cursor/rules/project.mdc`
+- Result: The site reads as an official actor page. Footer credit will not be restored.
+
 ## 2026-09-12 — Events on Work; family panel; public appearances
 
 - What: Moved “Write to Akash” from Home to Work (`#contact`). Off Camera is now a two-column family panel (full photograph + family copy only). Events email sits in a separate Events desk box on About. Added an In public section: MATA Sanman 2022, Star Pravah Parivar Puraskar 2022, Sadhi Manasa launch 2024, and temple visits. No press photographs of ribbon cuttings were found; those bookings are named on the events desk instead.

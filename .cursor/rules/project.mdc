@@ -26,3 +26,7 @@ Official personal site for Marathi actor Akash Nalawade. Final target: SEO-frien
 - Add `BrowserRouter` / HashRouter as the only page model
 - Commit secrets, `.env`, or `node_modules`
 - Generate fake photos of the actor
+- Put studio credit in the site footer (Mandal Softwares lives on `/credits/` only)
+- Restore copy the user has removed; treat the working tree as intentional
+- Use inauguration / ribbon-cutting / “collab” / “bookings desk” language
+- Pair an award or event with a photograph that is not from that occasion

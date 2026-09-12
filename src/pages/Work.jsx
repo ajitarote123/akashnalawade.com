@@ -102,9 +102,7 @@ export default function Work() {
               He acted in Marathi plays — including experimental work — and
               appeared in television commercials before{' '}
               <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext> became
-              his first serial. Individual play titles are not consistently
-              listed in public databases; the through-line is stage craft
-              first, then the daily soap. IMDb also lists a 2018 short,{' '}
+              his first serial. IMDb also lists a 2018 short,{' '}
               <Ext href={site.imdb}>
                 <em>Tears</em>
               </Ext>

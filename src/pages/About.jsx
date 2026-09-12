@@ -52,7 +52,7 @@ export default function About() {
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="section-head">
-          <h2>Looks</h2>
+          <h2>Portraits</h2>
           <p>Photographs from his own collection.</p>
         </div>
         <div className="gallery">
@@ -129,44 +129,30 @@ export default function About() {
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="section-head">
-          <h2>In public</h2>
-          <p>Awards nights, launches, and evenings away from the set.</p>
+          <h2>Recognition</h2>
+          <p>Awards and the first lead, as reported.</p>
         </div>
-        <div className="appearance-grid">
+        <div className="timeline">
           {appearances.map((item) => (
-            <article className="appearance-card" key={item.slug}>
-              <div className="appearance-media">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width="800"
-                  height="600"
-                  loading="lazy"
-                />
+            <article key={`${item.year}-${item.title}`}>
+              <time>{item.year}</time>
+              <div>
+                <h3>
+                  <Ext href={item.href}>{item.title}</Ext>
+                </h3>
+                <p>{item.body}</p>
               </div>
-              <p className="meta">
-                {item.year} · {item.place}
-              </p>
-              <h3 lang="mr">{item.titleMr}</h3>
-              <p className="role">{item.title}</p>
-              <p>{item.body}</p>
-              <Ext className="more" href={item.href}>
-                Source →
-              </Ext>
             </article>
           ))}
         </div>
       </section>
 
       <section className="enquiry-box" id="enquire">
-        <p className="kicker">Bookings</p>
-        <h2>Events desk</h2>
+        <p className="kicker">Appearances</p>
+        <h2>Enquiries</h2>
         <p>
-          Inaugurations, ribbon cuttings, and other public appearances are
-          arranged separately from family notes. Write to{' '}
-          <a href={site.emailHref}>{site.email}</a>, or see the full
-          events section on{' '}
-          <a href="/work/#contact">Work</a>.
+          For public appearances and brand associations, write to{' '}
+          <a href={site.emailHref}>{site.email}</a>.
         </p>
       </section>
     </>

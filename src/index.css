@@ -564,73 +564,6 @@ blockquote {
   margin-top: 0.9rem;
 }
 
-.appearance-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.4rem;
-}
-
-.appearance-card {
-  display: flex;
-  flex-direction: column;
-  padding: 1.4rem;
-  border: 1px solid var(--line);
-  background: var(--ink-soft);
-}
-
-.appearance-media {
-  margin: -1.4rem -1.4rem 1.1rem;
-  aspect-ratio: 16 / 11;
-  overflow: hidden;
-  background: #1a120e;
-}
-
-.appearance-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 22%;
-}
-
-.appearance-card .meta {
-  color: var(--gold);
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.appearance-card h3 {
-  margin: 0.55rem 0 0.25rem;
-  font-family: var(--mr);
-  font-size: 1.55rem;
-}
-
-.appearance-card .role {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-style: italic;
-}
-
-.appearance-card p {
-  margin-top: 0.7rem;
-  color: var(--paper-dim);
-  font-weight: 300;
-}
-
-.appearance-card .more {
-  margin-top: auto;
-  padding-top: 1.1rem;
-  color: var(--gold);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.appearance-card .more:hover {
-  color: var(--gold-bright);
-}
-
 .enquiry-box {
   margin: 0 6vw 4.5rem;
   padding: 2rem 2.2rem;
@@ -848,6 +781,7 @@ blockquote {
 .legal a,
 .note a,
 .family-copy a,
+.timeline a,
 .enquiry-box a,
 .contact-band a:not(.btn) {
   color: var(--gold);
@@ -864,6 +798,7 @@ blockquote {
 .legal a:hover,
 .note a:hover,
 .family-copy a:hover,
+.timeline a:hover,
 .enquiry-box a:hover,
 .contact-band a:not(.btn):hover {
   color: var(--gold-bright);
@@ -950,8 +885,15 @@ blockquote {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
-  gap: 2rem 1.5rem;
+  grid-template-columns: minmax(10rem, 1fr) minmax(0, 2.4fr);
+  gap: 2rem 2.4rem;
+  align-items: start;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.2rem;
 }
 
 .footer-mark {
@@ -967,8 +909,8 @@ blockquote {
   font-size: 0.68rem;
 }
 
-.footer-grid h2 {
-  margin-bottom: 0.6rem;
+.footer-links h2 {
+  margin-bottom: 0.45rem;
   color: var(--gold);
   font-family: var(--sans);
   font-size: 0.72rem;
@@ -977,12 +919,12 @@ blockquote {
   text-transform: uppercase;
 }
 
-.footer-grid ul {
+.footer-links ul {
   margin: 0;
   padding: 0;
 }
 
-.footer-grid li {
+.footer-links li {
   list-style: none;
 }
 
@@ -1000,7 +942,7 @@ blockquote {
 .footer-bar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.6rem 1.5rem;
   margin-top: 2rem;
   padding-top: 1.2rem;
@@ -1011,21 +953,13 @@ blockquote {
   color: var(--gold);
 }
 
-@media (max-width: 1100px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media (max-width: 900px) {
   .hero,
   .cards,
   .work-block,
   .facts,
   .about-split,
-  .family-panel,
-  .appearance-grid,
-  .footer-grid {
+  .family-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1049,6 +983,11 @@ blockquote {
 
   .stats {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
 }
 
@@ -1086,6 +1025,38 @@ blockquote {
 
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    padding: 2rem 5vw 1.4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .footer-links {
+    gap: 1rem 0.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-links h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .site-footer a {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.78rem;
+  }
+
+  .footer-bar {
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.3rem;
+    padding-top: 1rem;
   }
 }
 

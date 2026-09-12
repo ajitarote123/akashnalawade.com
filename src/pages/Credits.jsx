@@ -18,10 +18,8 @@ export default function Credits() {
         <p>
           Portraits and personal photographs were provided by{' '}
           {site.name} for this site. The vintage-car still is by Nilesh
-          Bramhane. Television stills used on the Work page and in the
-          About public-appearances section come from coverage of
-          Sahkutumb Sahaparivar and Sadhi Manasa. Award cards use his
-          portraits where a ceremony photograph is not on file.
+          Bramhane. Television stills on the Work page come from
+          coverage of Sahkutumb Sahaparivar and Sadhi Manasa.
         </p>
 
         <h2>Words</h2>

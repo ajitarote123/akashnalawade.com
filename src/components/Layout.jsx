@@ -1,4 +1,4 @@
-import { nav, site, studio } from '../data'
+import { nav, site } from '../data'
 import Ext from './Ext'
 
 export default function Layout({ page, children }) {
@@ -34,61 +34,59 @@ export default function Layout({ page, children }) {
       <main id="content">{children}</main>
       <footer className="site-footer">
         <div className="footer-grid">
-          <div>
+          <div className="footer-brand">
             <p className="footer-mark" lang="mr">
               {site.nameMr}
             </p>
             <p className="footer-official">Official website</p>
           </div>
-          <nav aria-label="Explore">
-            <h2>Explore</h2>
-            <ul>
-              {nav.map((link) => (
-                <li key={link.id}>
-                  <a href={link.href}>{link.label}</a>
+          <div className="footer-links">
+            <nav aria-label="Explore">
+              <h2>Explore</h2>
+              <ul>
+                {nav.map((link) => (
+                  <li key={link.id}>
+                    <a href={link.href}>{link.label}</a>
+                  </li>
+                ))}
+                <li>
+                  <a href="/work/#contact">Events</a>
                 </li>
-              ))}
-              <li>
-                <a href="/work/#contact">Events</a>
-              </li>
-            </ul>
-          </nav>
-          <nav aria-label="Site">
-            <h2>Site</h2>
-            <ul>
-              <li>
-                <a href="/terms/">Terms of use</a>
-              </li>
-              <li>
-                <a href="/credits/">Credits</a>
-              </li>
-              <li>
-                <a href="/sitemap/">Sitemap</a>
-              </li>
-            </ul>
-          </nav>
-          <nav aria-label="Connect">
-            <h2>Connect</h2>
-            <ul>
-              <li>
-                <Ext href={site.instagram}>Instagram</Ext>
-              </li>
-              <li>
-                <Ext href={site.facebook}>Facebook</Ext>
-              </li>
-              <li>
-                <a href={site.emailHref}>Events &amp; collab</a>
-              </li>
-            </ul>
-          </nav>
+              </ul>
+            </nav>
+            <nav aria-label="Site">
+              <h2>Site</h2>
+              <ul>
+                <li>
+                  <a href="/terms/">Terms</a>
+                </li>
+                <li>
+                  <a href="/credits/">Credits</a>
+                </li>
+                <li>
+                  <a href="/sitemap/">Sitemap</a>
+                </li>
+              </ul>
+            </nav>
+            <nav aria-label="Connect">
+              <h2>Connect</h2>
+              <ul>
+                <li>
+                  <Ext href={site.instagram}>Instagram</Ext>
+                </li>
+                <li>
+                  <Ext href={site.facebook}>Facebook</Ext>
+                </li>
+                <li>
+                  <a href={site.emailHref}>Enquiries</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div className="footer-bar">
           <p>
             © {year} {site.name}. All rights reserved.
-          </p>
-          <p>
-            Designed &amp; developed by{' '}
-            <Ext href={studio.url}>{studio.name}</Ext>
           </p>
         </div>
       </footer>

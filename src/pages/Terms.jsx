@@ -17,8 +17,7 @@ export default function Terms() {
         <p>
           akashnalawade.com is published for {site.name} as his official
           public presence. It is provided for information, press, and
-          polite enquiry. It is not a booking portal and does not accept
-          payments.
+          enquiry. It does not accept payments.
         </p>
 
         <h2>Use</h2>

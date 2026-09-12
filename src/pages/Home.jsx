@@ -26,8 +26,8 @@ export default function Home() {
             <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext>, and later
             as Satya, the lead of{' '}
             <Ext href={links.sadhiManasa}>Sadhi Manasa</Ext>. A Pune-trained
-            theatre actor who moved from a beloved supporting part to the
-            hero of a daily.
+            theatre actor who moved from a supporting part to the lead
+            of a daily.
           </p>
           <div className="actions">
             <a className="btn btn-primary" href="/work/">

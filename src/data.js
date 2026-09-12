@@ -55,7 +55,7 @@ export const timeline = [
   {
     year: '1991',
     title: 'Born in Pune',
-    body: 'Raised in a middle-class Pune family with no film-industry background. Schooling at Maharashtra Vidyamandir.',
+    body: 'Raised in Pune, outside the film industry. Schooling at Maharashtra Vidyamandir.',
   },
   {
     year: 'Education',
@@ -106,7 +106,7 @@ export const works = [
       'A joint-family drama about the More household. Akash played Laxmi’s third son — an unlettered, big-hearted young man whose teasing, loyal bond with wife Anjali (Anji) became a favourite with viewers. The character turned a supporting part into the show’s breakout popular face.',
     highlights: [
       'Television debut',
-      'Fan-favourite Pashya–Anji pairing',
+      'Pashya–Anji pairing',
       'Star Pravah Parivar Puraskar, Best Siblings (2022)',
     ],
     costars: 'Sunil Barve, Nandita Patkar, Komal Kumbhar, Amey Barve, Akash Shinde',
@@ -128,11 +128,11 @@ export const works = [
     image: '/images/work-sadhi-manasa.jpg',
     imageAlt: 'Akash Nalawade in a look from the Sadhi Manasa years',
     summary:
-      'Akash’s first lead. He played Satya, a troubled, unemployed young man whose life collides with Meera, a temple flower seller portrayed by Shivani Baokar. The pairing — and a look far removed from Pashya — marked his move from loved supporting actor to neta (hero) of a daily.',
+      'Akash’s first lead. He played Satya, a troubled, unemployed young man whose life collides with Meera, a temple flower seller portrayed by Shivani Baokar. The pairing — and a look far removed from Pashya — marked his move from supporting actor to the hero of a daily.',
     highlights: [
       'First lead role',
       'Opposite Shivani Baokar (Meera)',
-      'Romantic family drama; ~2-year run',
+      'Romantic family drama',
     ],
     costars: 'Shivani Baokar, Supriya Pathare, Pandharinath Kamble, Pankaj Khamkar',
     quote:
@@ -142,49 +142,22 @@ export const works = [
 
 export const appearances = [
   {
-    slug: 'mata-sanman-2022',
     year: '2022',
     title: 'MATA Sanman',
-    titleMr: 'मटा सन्मान',
-    place: 'Kalidas Auditorium, Mumbai',
-    body: 'Best Supporting Actor for Sahkutumb Sahaparivar (Pashya) at the 2022 MATA Sanman.',
+    body: 'Best Supporting Actor for Sahkutumb Sahaparivar (Pashya). Kalidas Auditorium, Mumbai.',
     href: links.mataSanman,
-    image: '/images/akash-vintage.jpg',
-    imageAlt: 'Akash Nalawade in a formal portrait by Nilesh Bramhane',
   },
   {
-    slug: 'parivar-puraskar-2022',
     year: '2022',
     title: 'Star Pravah Parivar Puraskar',
-    titleMr: 'स्टार प्रवाह परिवार पुरस्कार',
-    place: 'Star Pravah',
-    body: 'Shared Best Siblings with his on-screen brothers from the More household.',
+    body: 'Best Siblings, shared with his on-screen brothers from the More household.',
     href: links.sahkutumb,
-    image: '/images/work-sahkutumb.jpg',
-    imageAlt:
-      'Akash Nalawade with Komal Kumbhar in a look from the Sahkutumb Sahaparivar years',
   },
   {
-    slug: 'sadhi-manasa-launch',
     year: '2024',
-    title: 'Lead launch: Sadhi Manasa',
-    titleMr: 'साधी माणसं',
-    place: 'Star Pravah',
-    body: 'Star Pravah announced Sadhi Manasa with Akash as Satya, his first lead, opposite Shivani Baokar.',
+    title: 'Sadhi Manasa',
+    body: 'First lead. Star Pravah announced the serial with Akash as Satya, opposite Shivani Baokar.',
     href: links.sadhiLaunch,
-    image: '/images/work-sadhi-manasa.jpg',
-    imageAlt: 'Akash Nalawade in a look from the Sadhi Manasa years',
-  },
-  {
-    slug: 'temple-visits',
-    year: 'Ongoing',
-    title: 'Temple visits',
-    titleMr: 'दर्शन',
-    place: 'Maharashtra',
-    body: 'Public evenings and temple visits sit beside the serials. Inaugurations and civic functions are arranged through the events desk.',
-    href: site.instagram,
-    image: '/images/akash-temple.jpg',
-    imageAlt: 'Akash Nalawade with folded hands at a temple doorway',
   },
 ]
 
