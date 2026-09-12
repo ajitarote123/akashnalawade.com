@@ -68,7 +68,14 @@ export default function Work() {
         ))}
 
         <article className="work-block" id="theatre">
-          <div className="poster poster-plain">
+          <div className="poster">
+            <img
+              src="/images/akash-temple.jpg"
+              alt="Akash Nalawade at a temple doorway"
+              width="1200"
+              height="1600"
+              loading="lazy"
+            />
             <div className="poster-label">
               <span>Stage · Training</span>
               <strong lang="mr">नाट्य</strong>

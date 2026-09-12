@@ -6,10 +6,10 @@ export default function About() {
       <section className="page-hero about-split">
         <div className="about-photo">
           <img
-            src={site.images.formal}
-            alt={site.images.formalAlt}
-            width="1100"
-            height="1400"
+            src={site.images.studio}
+            alt={site.images.studioAlt}
+            width="1400"
+            height="2330"
           />
         </div>
         <div>
@@ -47,12 +47,13 @@ export default function About() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="section-head">
           <h2>Looks</h2>
-          <p>Publicity stills from the Pashya and Satya years.</p>
+          <p>Photographs he sent for this site.</p>
         </div>
         <div className="gallery">
           {gallery.map((shot) => (
             <figure key={shot.src}>
               <img
+                className={`pose-${shot.pose}`}
                 src={shot.src}
                 alt={shot.alt}
                 width="800"
@@ -86,8 +87,9 @@ export default function About() {
       <section className="section">
         <div className="section-head">
           <h2>Off camera</h2>
+          <p>Married to Ruchika Dhuri; their son Adhiraj was born in 2026.</p>
         </div>
-        <div className="couple">
+        <figure className="couple-frame">
           <img
             src={site.images.couple}
             alt={site.images.coupleAlt}
@@ -95,24 +97,22 @@ export default function About() {
             height="1000"
             loading="lazy"
           />
-          <div>
-            <p className="lede">
-              He married actress and model Ruchika Dhuri on 18 March 2023,
-              after their engagement in 2022. In 2026 the couple welcomed a
-              son, Adhiraj. For events and messages, his public Instagram is{' '}
-              <a href={site.instagram} rel="noreferrer" target="_blank">
-                {site.instagramHandle}
-              </a>
-              .
-            </p>
-            <p className="note">
-              This site is an independent static profile for
-              akashnalawade.com. It is not an official management page.
-              Dates and credits follow news reports, Star Pravah coverage,
-              and Wikipedia series pages.
-            </p>
-          </div>
-        </div>
+          <figcaption>Akash Nalawade and Ruchika Dhuri</figcaption>
+        </figure>
+        <p className="lede">
+          He married actress and model Ruchika Dhuri on 18 March 2023,
+          after their engagement in 2022. In 2026 the couple welcomed a
+          son, Adhiraj. For events and messages, his public Instagram is{' '}
+          <a href={site.instagram} rel="noreferrer" target="_blank">
+            {site.instagramHandle}
+          </a>
+          .
+        </p>
+        <p className="note">
+          This site is an independent static profile for akashnalawade.com.
+          It is not an official management page. Dates and credits follow
+          news reports, Star Pravah coverage, and Wikipedia series pages.
+        </p>
       </section>
     </>
   )

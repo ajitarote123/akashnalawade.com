@@ -40,7 +40,7 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 - [x] Richer Marathi intro on Home and About
 - [x] Contact / booking section (Instagram + optional mailto) if requested
 - [x] Keep `src/data.js` as the only credits list; add new shows there first
-- [ ] Swap in the 10 Sep 2026 WhatsApp album once the actual image files are exported (zip was chat text only)
+- [x] Swap in the 10 Sep 2026 WhatsApp album once the actual image files are exported (zip was chat text only)
 
 ## Performance (static hosting)
 

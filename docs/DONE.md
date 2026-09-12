@@ -2,6 +2,12 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-09-12 — Client album + Off Camera crop fix
+
+- What: Replaced press headshots on Home/About/Looks with the eight photos Akash sent (`AkashNalawadePics`). Stopped cropping the Ruchika still: it is now shown full-width with `object-fit: contain` (the source file itself already cuts the hairline). Serial cards still use character stills.
+- Files: `public/images/akash-*.jpg`, `src/data.js`, `src/pages/About.jsx`, `src/pages/Work.jsx`, `src/index.css`
+- Result: The site’s portraits are his approved set. Off Camera no longer clips the couple in a 5:4 cover box.
+
 ## 2026-09-12 — Photos, SEO, mobile, Marathi, contact
 
 - What: Replaced the monogram placeholder with publicity portraits of Akash; added canonical / Open Graph / Twitter / JSON-LD / `robots.txt` / `sitemap.xml`; raised tap targets and contrast; added Marathi intros and an Instagram contact band.
