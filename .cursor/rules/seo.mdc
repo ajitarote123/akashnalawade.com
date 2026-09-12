@@ -1,0 +1,33 @@
+---
+description: SEO requirements for HTML entry pages and public meta files
+globs: "**/*.html,public/**"
+alwaysApply: false
+---
+
+# SEO (HTML + public)
+
+Each real page must be crawlable without JavaScript.
+
+## Required on every entry HTML
+
+- Unique `<title>` (primary keyword + name, ~50–60 chars)
+- Unique `meta name="description"` (~140–160 chars)
+- `link rel="canonical"` to the live URL (`https://akashnalawade.com/…`)
+- Open Graph + Twitter: `og:title`, `og:description`, `og:url`, `og:image`, `og:type`, `twitter:card`
+- `html` language: `en` (add `lang="mr"` on Marathi nodes in React)
+
+```html
+<!-- ✅ GOOD -->
+<link rel="canonical" href="https://akashnalawade.com/work/" />
+<meta property="og:url" content="https://akashnalawade.com/work/" />
+
+<!-- ❌ BAD: same title/description on every page, no canonical -->
+```
+
+## Site-wide files (`public/`)
+
+- `robots.txt` allowing `/` and pointing to `sitemap.xml`
+- `sitemap.xml` listing `/`, `/about/`, `/work/`
+- JSON-LD `Person` (and `WebSite`) on the home HTML
+
+Do not rely on client-only meta tags — crawlers on shared hosting read the static HTML.

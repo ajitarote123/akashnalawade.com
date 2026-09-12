@@ -8,7 +8,7 @@
   --maroon: #7a2433;
   --maroon-deep: #4e1520;
   --clay: #b85c38;
-  --muted: #8a7b6c;
+  --muted: #b5a594;
   --line: rgba(196, 163, 90, 0.28);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   --serif: 'Cormorant Garamond', 'Tiro Devanagari Marathi', Georgia, serif;
@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -48,6 +49,12 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
 }
 
 h1,
@@ -137,7 +144,12 @@ p {
 }
 
 .nav a {
-  padding: 0.45rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.7rem 0.9rem;
   color: var(--paper-dim);
   font-size: 0.82rem;
   letter-spacing: 0.14em;
@@ -222,6 +234,16 @@ p {
   font-weight: 300;
 }
 
+.lede-mr {
+  font-family: var(--mr);
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.lede + .lede {
+  margin-top: 0.9rem;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -233,6 +255,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
   padding: 0.8rem 1.4rem;
   border: 1px solid var(--gold);
   font-size: 0.78rem;
@@ -278,35 +301,28 @@ p {
 .portrait {
   position: relative;
   min-height: 28rem;
+  aspect-ratio: 4 / 5;
   border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(78, 21, 32, 0.55), rgba(22, 16, 12, 0.2)),
-    radial-gradient(circle at 50% 30%, rgba(228, 201, 122, 0.18), transparent 46%);
+  background: #1a120e;
   overflow: hidden;
 }
 
-.portrait-frame {
-  position: absolute;
-  inset: 1rem;
-  border: 1px solid rgba(196, 163, 90, 0.45);
-}
-
-.portrait-mark {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-family: var(--mr);
-  font-size: clamp(8rem, 18vw, 14rem);
-  line-height: 1;
-  color: rgba(244, 234, 220, 0.12);
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
 }
 
 .portrait-caption {
   position: absolute;
-  right: 1.6rem;
-  bottom: 1.6rem;
-  left: 1.6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 2.4rem 1.4rem 1.2rem;
+  background: linear-gradient(transparent, rgba(22, 16, 12, 0.82));
   color: var(--gold-bright);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
@@ -346,6 +362,21 @@ p {
   padding: 1.8rem;
   border: 1px solid var(--line);
   background: var(--ink-soft);
+}
+
+.card-media {
+  margin: -1.8rem -1.8rem 1.2rem;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #1a120e;
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 .card.featured {
@@ -428,6 +459,92 @@ blockquote {
     var(--ink);
 }
 
+.about-split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #1a120e;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--ink-soft);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.gallery figcaption {
+  padding: 0.7rem 0.85rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.couple {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.couple img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid var(--line);
+}
+
+.contact-band {
+  margin: 0 6vw 4.5rem;
+  padding: 2.4rem;
+  border: 1px solid var(--line);
+  background: rgba(122, 36, 51, 0.16);
+}
+
+.contact-band h2 {
+  margin: 0.5rem 0 0.8rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-band p {
+  max-width: 38rem;
+  color: var(--paper-dim);
+}
+
+.contact-band p + p {
+  margin-top: 0.7rem;
+}
+
 .timeline {
   display: grid;
   gap: 0;
@@ -494,20 +611,36 @@ blockquote {
 }
 
 .poster {
+  position: relative;
+  min-height: 22rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(196, 163, 90, 0.35);
+  background: #1a120e;
+}
+
+.poster img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.poster-plain {
+  background: linear-gradient(180deg, #3a2a18, #16100c);
+}
+
+.poster-label {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 22rem;
   padding: 1.6rem;
-  border: 1px solid rgba(196, 163, 90, 0.35);
-}
-
-.poster.one {
-  background: linear-gradient(180deg, #7a2433, #2a1014);
-}
-
-.poster.two {
-  background: linear-gradient(180deg, #8a3d24, #1c120c);
+  background: linear-gradient(180deg, rgba(22, 16, 12, 0.12), rgba(22, 16, 12, 0.78));
 }
 
 .poster span {
@@ -592,7 +725,16 @@ blockquote {
   font-size: 0.82rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+}
+
 .site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--gold);
 }
 
@@ -604,8 +746,14 @@ blockquote {
   .hero,
   .cards,
   .work-block,
-  .facts {
+  .facts,
+  .about-split,
+  .couple {
     grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero {
@@ -640,7 +788,8 @@ blockquote {
   }
 
   .nav a {
-    padding: 0.4rem 0.2rem;
+    flex: 1;
+    padding: 0.7rem 0.4rem;
   }
 
   .hero,
@@ -649,5 +798,30 @@ blockquote {
   .section {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+
+  .contact-band {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 1.6rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

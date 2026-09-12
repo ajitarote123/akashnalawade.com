@@ -8,6 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  // Only these HTML entries (plus public/) go into dist/. docs/ stays in git only.
   build: {
     rollupOptions: {
       input: {

@@ -1,0 +1,32 @@
+---
+description: Mobile-first layout and touch-target rules
+globs: "**/*.css,**/*.jsx"
+alwaysApply: false
+---
+
+# Mobile-friendly UI
+
+Ship a usable first view at 320px width. Enhance at 640px and 900px.
+
+## Required
+
+- Viewport is already in HTML; do not disable zoom (`user-scalable=no`)
+- One column below 900px; no horizontal scroll
+- Tap targets at least 44×44px (nav links included)
+- Sticky header must not cover headings; test skip-link + first `h1`
+- Images `max-width: 100%`; prefer `aspect-ratio` to avoid layout shift
+- Respect `prefers-reduced-motion`
+
+```css
+/* ❌ BAD */
+.nav a { padding: 0.2rem; font-size: 0.7rem; }
+
+/* ✅ GOOD */
+.nav a { min-height: 44px; padding: 0.7rem 0.9rem; }
+```
+
+## Do not
+
+- Use hover-only actions for primary navigation or CTAs
+- Set `min-width` on layouts above the viewport
+- Add a hamburger unless the three-link nav no longer fits

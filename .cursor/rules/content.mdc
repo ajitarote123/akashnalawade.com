@@ -1,0 +1,24 @@
+---
+description: Biography and credits — source of truth and tone
+globs: "src/data.js,src/pages/**/*.jsx"
+alwaysApply: false
+---
+
+# Content
+
+`src/data.js` is the source of truth for name, serials, dates, and facts.
+
+## Voice
+
+- Bilingual labels are welcome (Marathi titles + English body)
+- Respectful, factual; no gossip beyond already-public family notes
+- Short quotes only, attributed; do not paste long news articles
+
+## Credits already established
+
+- *Sahkutumb Sahaparivar* (Star Pravah, 2020–2023) — Prashant “Pashya” More
+- *Sadhi Manasa* / साधी माणसं (Star Pravah, 2024–2026) — Satya
+- Training: Lalit Kala Kendra, SPPU; hometown Pune; born 8 Sep 1991
+- Instagram: `@akash_nalawade_official`
+
+If a new credit is added, put it in `works` (or a new array) and render from data — do not hardcode a one-off card that can drift.

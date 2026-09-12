@@ -1,0 +1,32 @@
+---
+description: Checklists for repeated site tasks (pages, content, build, deploy)
+alwaysApply: true
+---
+
+# Repetitive tasks
+
+Use `docs/TASKS.md` for the full checklists. Follow these when the user asks for a common job.
+
+## Add or rename a page
+
+1. Add `pagename/index.html` with unique `<title>`, description, `data-page`.
+2. Register the HTML file in `vite.config.js` `build.rollupOptions.input`.
+3. Add the page component, map it in `src/App.jsx`, and link it in `src/components/Layout.jsx`.
+4. Update `public/.htaccess` trailing-slash redirects if needed.
+
+## Change biography or credits
+
+- Edit `src/data.js` first; pages should consume that data.
+- Cite only publicly reported facts. Note the source in DONE.md.
+
+## Build and publish
+
+```bash
+npm run build
+```
+
+Upload **contents** of `dist/` (not the folder) to the host document root. Confirm `/`, `/about/`, `/work/` each return 200.
+
+## Commit / push
+
+Only when the user asks. Do not commit `dist/` or `node_modules`.

@@ -2,8 +2,25 @@ export const site = {
   name: 'Akash Nalawade',
   nameMr: 'आकाश नलावडे',
   tagline: 'Marathi television actor',
+  taglineMr: 'मराठी दूरचित्रवाणी अभिनेता',
+  url: 'https://akashnalawade.com',
   instagram: 'https://www.instagram.com/akash_nalawade_official/',
   instagramHandle: '@akash_nalawade_official',
+  facebook: 'https://www.facebook.com/AkashNalawadeOfficial/',
+  imdb: 'https://www.imdb.com/name/nm9813534/',
+  images: {
+    hero: '/images/akash-hero.jpg',
+    heroAlt: 'Akash Nalawade, Marathi television actor',
+    portrait: '/images/akash-portrait.jpg',
+    portraitAlt: 'Akash Nalawade on a television set',
+    formal: '/images/akash-formal.jpg',
+    formalAlt: 'Studio portrait of Akash Nalawade in a waistcoat',
+    casual: '/images/akash-casual.jpg',
+    casualAlt: 'Akash Nalawade standing on the back of a pickup truck',
+    couple: '/images/akash-ruchika.jpg',
+    coupleAlt: 'Akash Nalawade with his wife, Ruchika Dhuri',
+    og: '/images/og.jpg',
+  },
 }
 
 export const facts = [
@@ -59,6 +76,9 @@ export const works = [
     episodes: '1,000 episodes',
     production: 'Frames Production',
     note: 'Official remake of the Tamil series Pandian Stores.',
+    image: '/images/work-sahkutumb.jpg',
+    imageAlt:
+      'Akash Nalawade with Komal Kumbhar, his Sahkutumb Sahaparivar co-star as Anjali',
     summary:
       'A joint-family drama about the More household. Akash played Laxmi’s third son — an unlettered, big-hearted young man whose teasing, loyal bond with wife Anjali (Anji) became a favourite with viewers. The character turned a supporting part into the show’s breakout popular face.',
     highlights: [
@@ -80,6 +100,8 @@ export const works = [
     episodes: '693 episodes',
     production: 'Frames Production',
     note: 'Official remake of the Tamil series Siragadikka Aasai. Story set in Sangli.',
+    image: '/images/work-sadhi-manasa.jpg',
+    imageAlt: 'Akash Nalawade in a look from the Sadhi Manasa years',
     summary:
       'Akash’s first lead. He played Satya, a troubled, unemployed young man whose life collides with Meera, a temple flower seller portrayed by Shivani Baokar. The pairing — and a look far removed from Pashya — marked his move from loved supporting actor to neta (hero) of a daily.',
     highlights: [
@@ -90,5 +112,23 @@ export const works = [
     costars: 'Shivani Baokar, Supriya Pathare, Pandharinath Kamble, Pankaj Khamkar',
     quote:
       'Pashya received a lot of love. That role took me into people’s homes. I hope Satya finds the same love. My look in this show is very different too.',
+  },
+]
+
+export const gallery = [
+  {
+    src: '/images/akash-formal.jpg',
+    alt: 'Studio portrait of Akash Nalawade in a purple kurta and gold waistcoat',
+    caption: 'Portrait · Pashya years',
+  },
+  {
+    src: '/images/akash-portrait.jpg',
+    alt: 'Akash Nalawade on a television set in a zigzag shirt',
+    caption: 'On set · Sadhi Manasa years',
+  },
+  {
+    src: '/images/akash-casual.jpg',
+    alt: 'Akash Nalawade standing on the back of a blue pickup truck',
+    caption: 'Off set',
   },
 ]

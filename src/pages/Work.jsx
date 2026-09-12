@@ -6,6 +6,10 @@ export default function Work() {
       <section className="page-hero">
         <p className="kicker">Filmography</p>
         <h1>Selected work</h1>
+        <p className="lede lede-mr" lang="mr">
+          दूरचित्रवाणीवर पदार्पण पश्या म्हणून; नंतर सत्या ही मुख्य भूमिका.
+          दैनंदिन मालिकांपूर्वी: मराठी नाटके, प्रायोगिक रंगभूमी आणि जाहिराती.
+        </p>
         <p className="lede">
           Television debut as Pashya, then the lead as Satya. Before the
           dailies: Marathi theatre, experimental plays, and commercials.
@@ -13,13 +17,22 @@ export default function Work() {
       </section>
 
       <section className="section" style={{ paddingTop: 0 }}>
-        {works.map((show, index) => (
+        {works.map((show) => (
           <article className="work-block" key={show.slug} id={show.slug}>
-            <div className={`poster ${index === 0 ? 'one' : 'two'}`}>
-              <span>
-                {show.channel} · {show.status}
-              </span>
-              <strong lang="mr">{show.titleMr}</strong>
+            <div className="poster">
+              <img
+                src={show.image}
+                alt={show.imageAlt}
+                width="1200"
+                height="1500"
+                loading="lazy"
+              />
+              <div className="poster-label">
+                <span>
+                  {show.channel} · {show.status}
+                </span>
+                <strong lang="mr">{show.titleMr}</strong>
+              </div>
             </div>
             <div className="work-copy">
               <p className="kicker">{show.title}</p>
@@ -54,10 +67,12 @@ export default function Work() {
           </article>
         ))}
 
-        <article className="work-block">
-          <div className="poster" style={{ background: 'linear-gradient(180deg, #3a2a18, #16100c)' }}>
-            <span>Stage · Training</span>
-            <strong lang="mr">नाट्य</strong>
+        <article className="work-block" id="theatre">
+          <div className="poster poster-plain">
+            <div className="poster-label">
+              <span>Stage · Training</span>
+              <strong lang="mr">नाट्य</strong>
+            </div>
           </div>
           <div className="work-copy">
             <p className="kicker">Before television</p>
@@ -70,7 +85,8 @@ export default function Work() {
               television commercials before Sahkutumb Sahaparivar became his
               first serial. Individual play titles are not consistently listed
               in public databases; the through-line is stage craft first,
-              then the daily soap.
+              then the daily soap. IMDb also lists a 2018 short,{' '}
+              <em>Tears</em>, as Amit.
             </p>
           </div>
         </article>

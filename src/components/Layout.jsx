@@ -39,9 +39,12 @@ export default function Layout({ page, children }) {
         <p>
           {site.nameMr} · {site.name}
         </p>
-        <p>
+        <p className="footer-links">
           <a href={site.instagram} rel="noreferrer" target="_blank">
             Instagram {site.instagramHandle}
+          </a>
+          <a href={site.facebook} rel="noreferrer" target="_blank">
+            Facebook
           </a>
         </p>
         <p>Independent profile compiled from publicly reported interviews and credits.</p>

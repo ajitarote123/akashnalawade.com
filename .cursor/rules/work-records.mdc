@@ -1,0 +1,28 @@
+---
+description: How to record finished work and keep future targets current
+alwaysApply: true
+---
+
+# Work records
+
+Treat `docs/` as the project memory (git-tracked, not deployed). Read `docs/TARGETS.md` before starting; write `docs/DONE.md` when finishing.
+
+## After completing a task
+
+1. Append a dated entry to `docs/DONE.md` (newest first).
+2. Mark matching items done in `docs/TARGETS.md` or add new ones.
+3. Keep entries factual: what changed, which files, why it matters for the final site.
+
+```markdown
+## YYYY-MM-DD — Short title
+
+- What: one or two bullets
+- Files: `path/a`, `path/b`
+- Result: what a visitor or crawler gains
+```
+
+## Do not
+
+- Rewrite history of older DONE entries (append or strike-through only)
+- Leave TARGETS stale after shipping a listed item
+- Put secrets, credentials, or private family details beyond already-public facts
