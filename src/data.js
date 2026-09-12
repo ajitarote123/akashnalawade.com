@@ -135,8 +135,6 @@ export const works = [
       'Romantic family drama',
     ],
     costars: 'Shivani Baokar, Supriya Pathare, Pandharinath Kamble, Pankaj Khamkar',
-    quote:
-      'Pashya received a lot of love. That role took me into people’s homes. I hope Satya finds the same love. My look in this show is very different too.',
   },
 ]
 

@@ -2,6 +2,12 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-09-12 — Publish review
+
+- What: Kept `.poster-label { height: 100% }` and set `.poster { height: 100% }` so the Work overlay fills a tall card. Removed unused CSS (`.poster-plain`, `.band`, unused colour tokens) and an unused quote field. All 11 images in `public/images/` are referenced. No stray Vite/template assets.
+- Files: `src/index.css`, `src/data.js`
+- Result: Repo is ready to build and upload `dist/`. Live smoke-test and Search Console remain after deploy.
+
 ## 2026-09-12 — Footer on small screens
 
 - What: Footer is now brand + a three-column link row (Explore / Site / Connect). On a phone the name sits above the links instead of one long stacked list. Terms label shortened to fit the column.

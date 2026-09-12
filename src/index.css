@@ -6,11 +6,8 @@
   --gold: #c4a35a;
   --gold-bright: #e4c97a;
   --maroon: #7a2433;
-  --maroon-deep: #4e1520;
-  --clay: #b85c38;
   --muted: #b5a594;
   --line: rgba(196, 163, 90, 0.28);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   --serif: 'Cormorant Garamond', 'Tiro Devanagari Marathi', Georgia, serif;
   --sans: 'Outfit', 'Noto Sans Devanagari', system-ui, sans-serif;
   --mr: 'Tiro Devanagari Marathi', 'Noto Sans Devanagari', serif;
@@ -184,7 +181,6 @@ p {
 
 .hero,
 .page-hero,
-.band,
 .section {
   padding: 4.5rem 6vw;
 }
@@ -330,8 +326,7 @@ p {
 }
 
 .section h2,
-.page-hero h2,
-.band h2 {
+.page-hero h2 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
@@ -670,6 +665,7 @@ blockquote {
 
 .poster {
   position: relative;
+  height: 100%;
   min-height: 22rem;
   padding: 0;
   overflow: hidden;
@@ -686,13 +682,10 @@ blockquote {
   object-position: center 18%;
 }
 
-.poster-plain {
-  background: linear-gradient(180deg, #3a2a18, #16100c);
-}
-
 .poster-label {
   position: relative;
   z-index: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1010,7 +1003,6 @@ blockquote {
 
   .hero,
   .page-hero,
-  .band,
   .section {
     padding-left: 5vw;
     padding-right: 5vw;

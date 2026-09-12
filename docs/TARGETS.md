@@ -53,5 +53,6 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 ## Launch
 
 - [x] README deploy steps match the host (document root, `.htaccess`, 404)
+- [x] Pre-publish review: unused CSS/data removed; all shipped images are used
 - [ ] Smoke-test live URLs after first upload
 - [ ] Submit sitemap in Google Search Console when the domain is live
