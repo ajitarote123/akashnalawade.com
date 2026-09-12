@@ -1,12 +1,15 @@
 # Akash Nalawade
 
-Static three-page Vite + React site for [akashnalawade.com](https://akashnalawade.com). No Node server is required in production.
+Official static Vite + React site for [akashnalawade.com](https://akashnalawade.com). No Node server is required in production.
 
 ## Pages
 
 - `/` — Home
 - `/about/` — Biography
 - `/work/` — Television and theatre credits
+- `/terms/` — Terms of use
+- `/credits/` — Photograph and studio credits
+- `/sitemap/` — HTML sitemap
 
 Portraits live in `public/images/` and ship with `dist/`. Credits and photo paths stay in `src/data.js`.
 
@@ -21,9 +24,9 @@ npm run dev
 
 1. `npm run build`
 2. Upload **everything inside** `dist/` (not the folder itself) into `public_html` (or the domain document root).
-3. Keep folder structure: `index.html`, `about/index.html`, `work/index.html`, `assets/`, `images/`, `robots.txt`, `sitemap.xml`, `.htaccess`.
+3. Keep folder structure: `index.html`, `about/`, `work/`, `terms/`, `credits/`, `sitemap/`, `assets/`, `images/`, `robots.txt`, `sitemap.xml`, `.htaccess`.
 
-Apache will serve `/about/` and `/work/` as real directories. This is a multi-page static build, so PHP or Node is not needed.
+Apache will serve each folder as a real directory. This is a multi-page static build, so PHP or Node is not needed.
 
 Do not upload `docs/` — it is project notes only and is not part of the build.
 
@@ -33,4 +36,4 @@ Progress notes live in [`docs/`](docs/) (`DONE.md`, `TARGETS.md`, `TASKS.md`). T
 
 ## Notes
 
-Credits follow publicly reported interviews, Star Pravah coverage, and series Wikipedia pages. The site is an independent profile, not an official management page.
+This is the official website of Akash Nalawade. Events: `an.events.collaboration@gmail.com`. Designed and developed by [Mandal Softwares](https://software.mandal.one/).

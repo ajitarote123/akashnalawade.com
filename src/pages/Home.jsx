@@ -1,11 +1,18 @@
-import { site, works } from '../data'
+import Ext from '../components/Ext'
+import { links, site, works } from '../data'
 
 export default function Home() {
   return (
     <>
       <section className="hero">
         <div>
-          <p className="kicker">Star Pravah · Theatre · Pune</p>
+          <p className="kicker">
+            <Ext href={links.starPravah}>Star Pravah</Ext>
+            {' · '}
+            Theatre
+            {' · '}
+            <Ext href={links.pune}>Pune</Ext>
+          </p>
           <h1 lang="mr">आकाश नलावडे</h1>
           <p className="english-name">Akash Nalawade</p>
           <p className="lede lede-mr" lang="mr">
@@ -15,10 +22,12 @@ export default function Home() {
             घेतलेला कलाकार.
           </p>
           <p className="lede">
-            Marathi television actor known to households as Pashya in
-            Sahkutumb Sahaparivar, and later as Satya, the lead of Sadhi
-            Manasa. A Pune-trained theatre actor who moved from a beloved
-            supporting part to the hero of a daily.
+            Marathi television actor known to households as Pashya in{' '}
+            <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext>, and later
+            as Satya, the lead of{' '}
+            <Ext href={links.sadhiManasa}>Sadhi Manasa</Ext>. A Pune-trained
+            theatre actor who moved from a beloved supporting part to the
+            hero of a daily.
           </p>
           <div className="actions">
             <a className="btn btn-primary" href="/work/">
@@ -39,7 +48,9 @@ export default function Home() {
             </div>
             <div>
               <dt>Home</dt>
-              <dd>Pune</dd>
+              <dd>
+                <Ext href={links.pune}>Pune</Ext>
+              </dd>
             </div>
           </dl>
         </div>
@@ -58,7 +69,11 @@ export default function Home() {
       <section className="section">
         <div className="section-head">
           <h2>On screen</h2>
-          <p>Two Star Pravah serials that defined his public image.</p>
+          <p>
+            Two{' '}
+            <Ext href={links.starPravah}>Star Pravah</Ext> serials that
+            defined his public image.
+          </p>
         </div>
         <div className="cards">
           {works.map((show, index) => (
@@ -97,24 +112,21 @@ export default function Home() {
       </section>
 
       <section className="contact-band" id="contact">
-        <p className="kicker">Events</p>
-        <h2>Contact</h2>
-        <p lang="mr">
-          कार्यक्रम, शुभेच्छा आणि संदेशासाठी सार्वजनिक इन्स्टाग्राम.
-        </p>
+        <p className="kicker">Events &amp; collaborations</p>
+        <h2>Write to Akash</h2>
+        <p lang="mr">कार्यक्रम आणि सहकार्यासाठी थेट पत्र.</p>
         <p>
-          For events and messages, write to him on Instagram. This site is
-          an independent profile, not a booking office.
+          For appearances, events, and brand collaborations, email{' '}
+          <a href={site.emailHref}>{site.email}</a>
+          . Instagram remains open for public messages.
         </p>
         <div className="actions">
-          <a
-            className="btn btn-primary"
-            href={site.instagram}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Instagram {site.instagramHandle}
+          <a className="btn btn-primary" href={site.emailHref}>
+            {site.email}
           </a>
+          <Ext className="btn btn-ghost" href={site.instagram}>
+            Instagram {site.instagramHandle}
+          </Ext>
         </div>
       </section>
     </>

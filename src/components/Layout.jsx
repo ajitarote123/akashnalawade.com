@@ -1,12 +1,9 @@
-import { site } from '../data'
-
-const links = [
-  { id: 'home', href: '/', label: 'Home' },
-  { id: 'about', href: '/about/', label: 'About' },
-  { id: 'work', href: '/work/', label: 'Work' },
-]
+import { nav, site, studio } from '../data'
+import Ext from './Ext'
 
 export default function Layout({ page, children }) {
+  const year = new Date().getFullYear()
+
   return (
     <div className="layout">
       <a className="skip" href="#content">
@@ -23,7 +20,7 @@ export default function Layout({ page, children }) {
           </span>
         </a>
         <nav className="nav" aria-label="Primary">
-          {links.map((link) => (
+          {nav.map((link) => (
             <a
               key={link.id}
               href={link.href}
@@ -36,18 +33,64 @@ export default function Layout({ page, children }) {
       </header>
       <main id="content">{children}</main>
       <footer className="site-footer">
-        <p>
-          {site.nameMr} · {site.name}
-        </p>
-        <p className="footer-links">
-          <a href={site.instagram} rel="noreferrer" target="_blank">
-            Instagram {site.instagramHandle}
-          </a>
-          <a href={site.facebook} rel="noreferrer" target="_blank">
-            Facebook
-          </a>
-        </p>
-        <p>Independent profile compiled from publicly reported interviews and credits.</p>
+        <div className="footer-grid">
+          <div>
+            <p className="footer-mark" lang="mr">
+              {site.nameMr}
+            </p>
+            <p className="footer-official">Official website</p>
+          </div>
+          <nav aria-label="Explore">
+            <h2>Explore</h2>
+            <ul>
+              {nav.map((link) => (
+                <li key={link.id}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+              <li>
+                <a href="/#contact">Events</a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Site">
+            <h2>Site</h2>
+            <ul>
+              <li>
+                <a href="/terms/">Terms of use</a>
+              </li>
+              <li>
+                <a href="/credits/">Credits</a>
+              </li>
+              <li>
+                <a href="/sitemap/">Sitemap</a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Connect">
+            <h2>Connect</h2>
+            <ul>
+              <li>
+                <Ext href={site.instagram}>Instagram</Ext>
+              </li>
+              <li>
+                <Ext href={site.facebook}>Facebook</Ext>
+              </li>
+              <li>
+                <a href={site.emailHref}>Events &amp; collab</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="footer-bar">
+          <p>
+            © {year} {site.name}. All rights reserved.
+          </p>
+          <p>
+            Designed &amp; developed by{' '}
+            <Ext href={studio.url}>{studio.name}</Ext>
+          </p>
+        </div>
       </footer>
     </div>
   )

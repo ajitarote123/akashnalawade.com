@@ -8,22 +8,43 @@ export const site = {
   instagramHandle: '@akash_nalawade_official',
   facebook: 'https://www.facebook.com/AkashNalawadeOfficial/',
   imdb: 'https://www.imdb.com/name/nm9813534/',
+  email: 'an.events.collaboration@gmail.com',
+  emailHref: 'mailto:an.events.collaboration@gmail.com',
   images: {
     hero: '/images/akash-hero.jpg',
     heroAlt: 'Akash Nalawade seated by the sea in a denim shirt',
     studio: '/images/akash-studio.jpg',
     studioAlt: 'Studio portrait of Akash Nalawade in a red shirt',
-    couple: '/images/akash-ruchika.jpg',
-    coupleAlt: 'Akash Nalawade with his wife, Ruchika Dhuri',
+    family: '/images/akash-family.jpg',
+    familyAlt: 'Akash Nalawade with his wife Ruchika Dhuri and their son Adhiraj',
     og: '/images/og.jpg',
   },
 }
 
+export const links = {
+  starPravah: 'https://en.wikipedia.org/wiki/Star_Pravah',
+  pune: 'https://en.wikipedia.org/wiki/Pune',
+  sppu: 'https://www.unipune.ac.in/',
+  lalitKala: 'https://www.unipune.ac.in/',
+  sahkutumb: 'https://en.wikipedia.org/wiki/Sahkutumb_Sahaparivar',
+  sadhiManasa: 'https://en.wikipedia.org/wiki/Sadhi_Manasa',
+}
+
+export const studio = {
+  name: 'Mandal Softwares',
+  url: 'https://software.mandal.one/',
+  email: 'mandalsoftwares@gmail.com',
+  emailHref: 'mailto:mandalsoftwares@gmail.com',
+  phone: '+91 86525 51424',
+  phoneHref: 'tel:+918652551424',
+  whatsapp: 'https://wa.me/918652551424',
+}
+
 export const facts = [
   { label: 'Born', value: '8 September 1991' },
-  { label: 'Hometown', value: 'Pune, Maharashtra' },
-  { label: 'Training', value: 'Lalit Kala Kendra, SPPU' },
-  { label: 'Debut', value: 'Sahkutumb Sahaparivar, 2020' },
+  { label: 'Hometown', value: 'Pune, Maharashtra', href: links.pune },
+  { label: 'Training', value: 'Lalit Kala Kendra, SPPU', href: links.sppu },
+  { label: 'Debut', value: 'Sahkutumb Sahaparivar, 2020', href: links.sahkutumb },
 ]
 
 export const timeline = [
@@ -67,6 +88,8 @@ export const works = [
     role: 'Prashant “Pashya” More',
     roleMr: 'प्रशांत “पश्या” मोरे',
     channel: 'Star Pravah',
+    channelHref: links.starPravah,
+    href: links.sahkutumb,
     years: '24 February 2020 – 3 August 2023',
     status: 'Completed',
     episodes: '1,000 episodes',
@@ -91,6 +114,8 @@ export const works = [
     role: 'Satya',
     roleMr: 'सत्या',
     channel: 'Star Pravah',
+    channelHref: links.starPravah,
+    href: links.sadhiManasa,
     years: '18 March 2024 – 29 March 2026',
     status: 'Completed',
     episodes: '693 episodes',
@@ -148,4 +173,19 @@ export const gallery = [
     caption: 'On the road',
     pose: 'tall',
   },
+]
+
+export const nav = [
+  { id: 'home', href: '/', label: 'Home' },
+  { id: 'about', href: '/about/', label: 'About' },
+  { id: 'work', href: '/work/', label: 'Work' },
+]
+
+export const pages = [
+  { href: '/', title: 'Home', blurb: 'Introduction and selected serials.' },
+  { href: '/about/', title: 'About', blurb: 'Biography, photographs, and family.' },
+  { href: '/work/', title: 'Work', blurb: 'Television credits and theatre training.' },
+  { href: '/terms/', title: 'Terms of use', blurb: 'How this official site may be used.' },
+  { href: '/credits/', title: 'Credits', blurb: 'Photographs, sources, and the studio.' },
+  { href: '/sitemap/', title: 'Sitemap', blurb: 'A map of every public page.' },
 ]

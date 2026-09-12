@@ -6,4 +6,7 @@ ErrorDocument 404 /404.html
   RewriteBase /
   RewriteRule ^about$ /about/ [R=301,L]
   RewriteRule ^work$ /work/ [R=301,L]
+  RewriteRule ^terms$ /terms/ [R=301,L]
+  RewriteRule ^credits$ /credits/ [R=301,L]
+  RewriteRule ^sitemap$ /sitemap/ [R=301,L]
 </IfModule>

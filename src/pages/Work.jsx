@@ -1,4 +1,5 @@
-import { works } from '../data'
+import Ext from '../components/Ext'
+import { links, site, works } from '../data'
 
 export default function Work() {
   return (
@@ -13,6 +14,8 @@ export default function Work() {
         <p className="lede">
           Television debut as Pashya, then the lead as Satya. Before the
           dailies: Marathi theatre, experimental plays, and commercials.
+          Full listing also on{' '}
+          <Ext href={site.imdb}>IMDb</Ext>.
         </p>
       </section>
 
@@ -29,13 +32,17 @@ export default function Work() {
               />
               <div className="poster-label">
                 <span>
-                  {show.channel} · {show.status}
+                  <Ext href={show.channelHref}>{show.channel}</Ext>
+                  {' · '}
+                  {show.status}
                 </span>
                 <strong lang="mr">{show.titleMr}</strong>
               </div>
             </div>
             <div className="work-copy">
-              <p className="kicker">{show.title}</p>
+              <p className="kicker">
+                <Ext href={show.href}>{show.title}</Ext>
+              </p>
               <h2 lang="mr">{show.roleMr}</h2>
               <p className="role">{show.role}</p>
               <p>{show.summary}</p>
@@ -84,16 +91,23 @@ export default function Work() {
           <div className="work-copy">
             <p className="kicker">Before television</p>
             <h2>Theatre and commercials</h2>
-            <p className="role">Lalit Kala Kendra, Pune</p>
+            <p className="role">
+              <Ext href={links.lalitKala}>Lalit Kala Kendra, Pune</Ext>
+            </p>
             <p>
               Akash trained at Pune’s Lalit Kala Kendra and holds a theatre
-              degree from Savitribai Phule Pune University. He acted in
-              Marathi plays — including experimental work — and appeared in
-              television commercials before Sahkutumb Sahaparivar became his
-              first serial. Individual play titles are not consistently listed
-              in public databases; the through-line is stage craft first,
-              then the daily soap. IMDb also lists a 2018 short,{' '}
-              <em>Tears</em>, as Amit.
+              degree from{' '}
+              <Ext href={links.sppu}>Savitribai Phule Pune University</Ext>.
+              He acted in Marathi plays — including experimental work — and
+              appeared in television commercials before{' '}
+              <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext> became
+              his first serial. Individual play titles are not consistently
+              listed in public databases; the through-line is stage craft
+              first, then the daily soap. IMDb also lists a 2018 short,{' '}
+              <Ext href={site.imdb}>
+                <em>Tears</em>
+              </Ext>
+              , as Amit.
             </p>
           </div>
         </article>

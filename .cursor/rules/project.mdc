@@ -5,18 +5,18 @@ alwaysApply: true
 
 # akashnalawade.com
 
-Independent personal site for Marathi actor Akash Nalawade. Final target: SEO-friendly, mobile-friendly, static on shared Linux hosting (no Node/PHP runtime).
+Official personal site for Marathi actor Akash Nalawade. Final target: SEO-friendly, mobile-friendly, static on shared Linux hosting (no Node/PHP runtime).
 
 ## Architecture
 
-- Vite + React **multi-page app**: `index.html`, `about/index.html`, `work/index.html`
+- Vite + React **multi-page app**: `index.html`, `about/`, `work/`, `terms/`, `credits/`, `sitemap/`
 - Shared React via `data-page` on `#root` (`src/main.jsx` → `src/App.jsx`)
 - Copy and credits live in `src/data.js` — do not scatter facts across pages
 - Production = contents of `dist/` uploaded to `public_html`
 
 ## Do
 
-- Keep three real HTML entry points (crawlers see `/`, `/about/`, `/work/`)
+- Keep real HTML entry points (crawlers see `/`, `/about/`, `/work/`, and the legal pages)
 - Prefer CSS in `src/index.css`; avoid new CSS libraries unless asked
 - Use public, sourced facts only; do not invent credits or quotes
 - After finishing work, update `docs/DONE.md` and `docs/TARGETS.md`

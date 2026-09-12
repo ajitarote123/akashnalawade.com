@@ -2,6 +2,12 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-09-12 — Official footer, family photo, legal pages
+
+- What: Replaced the low-quality couple still with Akash’s family photograph. Removed “independent profile” disclaimers. Added a four-column official footer (explore, site, connect, copyright). New pages: `/terms/`, `/credits/`, `/sitemap/`. Home contact now leads with `an.events.collaboration@gmail.com`. Quiet gold links on Star Pravah, serial Wikipedia pages, Pune, SPPU, IMDb, Instagram, Facebook, and Mandal Softwares.
+- Files: `public/images/akash-family.jpg`, `src/data.js`, `src/pages/*`, `src/components/Layout.jsx`, `src/components/Ext.jsx`, `terms/`, `credits/`, `sitemap/`, `src/index.css`, `vite.config.js`, `public/.htaccess`, `public/sitemap.xml`, `README.md`
+- Result: The site reads as Akash’s official site. Credits name Mandal Softwares with phone, WhatsApp, and email.
+
 ## 2026-09-12 — Client album + Off Camera crop fix
 
 - What: Replaced press headshots on Home/About/Looks with the eight photos Akash sent (`AkashNalawadePics`). Stopped cropping the Ruchika still: it is now shown full-width with `object-fit: contain` (the source file itself already cuts the hairline). Serial cards still use character stills.

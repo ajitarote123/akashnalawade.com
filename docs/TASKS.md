@@ -24,7 +24,7 @@ Copy the relevant list when doing the job. Tick in the working copy; do not leav
 
 1. [ ] `npm run build`
 2. [ ] Upload **contents** of `dist/` to `public_html` (do not upload `docs/`)
-3. [ ] Keep `about/`, `work/`, `assets/`, `.htaccess`, `favicon.svg`
+3. [ ] Keep `about/`, `work/`, `terms/`, `credits/`, `sitemap/`, `assets/`, `images/`, `.htaccess`, `favicon.svg`
 4. [ ] Open `/`, `/about/`, `/work/` on phone and desktop
 5. [ ] Confirm 404 falls back to the custom page or home
 6. [ ] Note the deploy date in `docs/DONE.md`

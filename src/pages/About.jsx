@@ -1,4 +1,5 @@
-import { facts, gallery, site, timeline } from '../data'
+import Ext from '../components/Ext'
+import { facts, gallery, links, site, timeline } from '../data'
 
 export default function About() {
   return (
@@ -24,11 +25,14 @@ export default function About() {
             माणसं’मध्ये सत्या ही मुख्य भूमिका त्यांनी साकारली.
           </p>
           <p className="lede">
-            Akash Nalawade is a Marathi actor born in Pune on 8 September
-            1991. Without an industry family behind him, he trained in
-            acting at Lalit Kala Kendra, worked on the Marathi stage, and
-            broke through on television as Pashya — then took the lead as
-            Satya in Sadhi Manasa.
+            Akash Nalawade is a Marathi actor born in{' '}
+            <Ext href={links.pune}>Pune</Ext> on 8 September 1991. Without an
+            industry family behind him, he trained in acting at Lalit Kala
+            Kendra,{' '}
+            <Ext href={links.sppu}>Savitribai Phule Pune University</Ext>,
+            worked on the Marathi stage, and broke through on television as
+            Pashya — then took the lead as Satya in{' '}
+            <Ext href={links.sadhiManasa}>Sadhi Manasa</Ext>.
           </p>
         </div>
       </section>
@@ -38,7 +42,9 @@ export default function About() {
           {facts.map((item) => (
             <div className="fact" key={item.label}>
               <dt>{item.label}</dt>
-              <dd>{item.value}</dd>
+              <dd>
+                {item.href ? <Ext href={item.href}>{item.value}</Ext> : item.value}
+              </dd>
             </div>
           ))}
         </dl>
@@ -47,7 +53,7 @@ export default function About() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="section-head">
           <h2>Looks</h2>
-          <p>Photographs he sent for this site.</p>
+          <p>Photographs from his own collection.</p>
         </div>
         <div className="gallery">
           {gallery.map((shot) => (
@@ -69,7 +75,10 @@ export default function About() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="section-head">
           <h2>Journey</h2>
-          <p>Publicly reported milestones from school in Pune to Star Pravah.</p>
+          <p>
+            From school in <Ext href={links.pune}>Pune</Ext> to{' '}
+            <Ext href={links.starPravah}>Star Pravah</Ext>.
+          </p>
         </div>
         <div className="timeline">
           {timeline.map((item) => (
@@ -87,31 +96,25 @@ export default function About() {
       <section className="section">
         <div className="section-head">
           <h2>Off camera</h2>
-          <p>Married to Ruchika Dhuri; their son Adhiraj was born in 2026.</p>
+          <p>With Ruchika Dhuri and their son, Adhiraj.</p>
         </div>
         <figure className="couple-frame">
           <img
-            src={site.images.couple}
-            alt={site.images.coupleAlt}
-            width="1400"
-            height="1000"
+            src={site.images.family}
+            alt={site.images.familyAlt}
+            width="765"
+            height="1024"
             loading="lazy"
           />
-          <figcaption>Akash Nalawade and Ruchika Dhuri</figcaption>
+          <figcaption>Ruchika, Adhiraj, and Akash</figcaption>
         </figure>
         <p className="lede">
           He married actress and model Ruchika Dhuri on 18 March 2023,
           after their engagement in 2022. In 2026 the couple welcomed a
-          son, Adhiraj. For events and messages, his public Instagram is{' '}
-          <a href={site.instagram} rel="noreferrer" target="_blank">
-            {site.instagramHandle}
-          </a>
-          .
-        </p>
-        <p className="note">
-          This site is an independent static profile for akashnalawade.com.
-          It is not an official management page. Dates and credits follow
-          news reports, Star Pravah coverage, and Wikipedia series pages.
+          son, Adhiraj. For events and collaborations, write to{' '}
+          <a href={site.emailHref}>{site.email}</a>, or send a public note
+          on{' '}
+          <Ext href={site.instagram}>{site.instagramHandle}</Ext>.
         </p>
       </section>
     </>

@@ -10,6 +10,7 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 
 - [ ] Lighthouse (mobile): Performance, SEO, Best Practices, Accessibility each ≥ 90
 - [x] `/`, `/about/`, `/work/` have unique title, description, canonical, and social preview tags
+- [x] `/terms/`, `/credits/`, `/sitemap/` exist with unique meta and footer links
 - [x] `robots.txt` + `sitemap.xml` present in `dist/`
 - [x] Home HTML includes JSON-LD `Person` / `WebSite` for Akash Nalawade
 - [x] No horizontal scroll at 320px; nav and CTAs meet 44px tap targets
@@ -39,6 +40,7 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 - [x] Replace monogram hero with approved stills/headshot when provided (do not generate a likeness)
 - [x] Richer Marathi intro on Home and About
 - [x] Contact / booking section (Instagram + optional mailto) if requested
+- [x] Official footer: copyright, credits, quick links; events email on Home and About
 - [x] Keep `src/data.js` as the only credits list; add new shows there first
 - [x] Swap in the 10 Sep 2026 WhatsApp album once the actual image files are exported (zip was chat text only)
 
