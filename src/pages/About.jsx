@@ -1,5 +1,5 @@
 import Ext from '../components/Ext'
-import { facts, gallery, links, site, timeline } from '../data'
+import { appearances, facts, gallery, links, site, timeline } from '../data'
 
 export default function About() {
   return (
@@ -93,28 +93,80 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section id="off-camera" className="section">
         <div className="section-head">
           <h2>Off camera</h2>
           <p>With Ruchika Dhuri and their son, Adhiraj.</p>
         </div>
-        <figure className="couple-frame">
-          <img
-            src={site.images.family}
-            alt={site.images.familyAlt}
-            width="765"
-            height="1024"
-            loading="lazy"
-          />
-          <figcaption>Ruchika, Adhiraj, and Akash</figcaption>
-        </figure>
-        <p className="lede">
-          He married actress and model Ruchika Dhuri on 18 March 2023,
-          after their engagement in 2022. In 2026 the couple welcomed a
-          son, Adhiraj. For events and collaborations, write to{' '}
-          <a href={site.emailHref}>{site.email}</a>, or send a public note
-          on{' '}
-          <Ext href={site.instagram}>{site.instagramHandle}</Ext>.
+        <div className="family-panel">
+          <figure className="couple-frame">
+            <img
+              src={site.images.family}
+              alt={site.images.familyAlt}
+              width="765"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption>Ruchika, Adhiraj, and Akash</figcaption>
+          </figure>
+          <div className="family-copy">
+            <p className="kicker">Family</p>
+            <h3>Ruchika and Adhiraj</h3>
+            <p>
+              He married actress and model Ruchika Dhuri on 18 March 2023,
+              after their engagement in 2022. Colleagues from{' '}
+              <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext> were
+              among those present at the wedding.
+            </p>
+            <p>
+              In 2026 the couple welcomed a son, Adhiraj. They keep family
+              life largely private, sharing a few photographs — including
+              this temple visit — with the people who follow his work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="section-head">
+          <h2>In public</h2>
+          <p>Awards nights, launches, and evenings away from the set.</p>
+        </div>
+        <div className="appearance-grid">
+          {appearances.map((item) => (
+            <article className="appearance-card" key={item.slug}>
+              <div className="appearance-media">
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <p className="meta">
+                {item.year} · {item.place}
+              </p>
+              <h3 lang="mr">{item.titleMr}</h3>
+              <p className="role">{item.title}</p>
+              <p>{item.body}</p>
+              <Ext className="more" href={item.href}>
+                Source →
+              </Ext>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="enquiry-box" id="enquire">
+        <p className="kicker">Bookings</p>
+        <h2>Events desk</h2>
+        <p>
+          Inaugurations, ribbon cuttings, and other public appearances are
+          arranged separately from family notes. Write to{' '}
+          <a href={site.emailHref}>{site.email}</a>, or see the full
+          events section on{' '}
+          <a href="/work/#contact">Work</a>.
         </p>
       </section>
     </>

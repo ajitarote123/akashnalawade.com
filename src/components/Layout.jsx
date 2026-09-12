@@ -49,7 +49,7 @@ export default function Layout({ page, children }) {
                 </li>
               ))}
               <li>
-                <a href="/#contact">Events</a>
+                <a href="/work/#contact">Events</a>
               </li>
             </ul>
           </nav>

@@ -1,3 +1,4 @@
+import ContactBand from '../components/ContactBand'
 import Ext from '../components/Ext'
 import { links, site, works } from '../data'
 
@@ -112,6 +113,8 @@ export default function Work() {
           </div>
         </article>
       </section>
+
+      <ContactBand />
     </>
   )
 }

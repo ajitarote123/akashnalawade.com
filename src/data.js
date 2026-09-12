@@ -28,6 +28,10 @@ export const links = {
   lalitKala: 'https://www.unipune.ac.in/',
   sahkutumb: 'https://en.wikipedia.org/wiki/Sahkutumb_Sahaparivar',
   sadhiManasa: 'https://en.wikipedia.org/wiki/Sadhi_Manasa',
+  mataSanman:
+    'https://www.filmibeat.com/marathi-movies/news/mata-sanman-2022-winners-list-out-ankush-chaudhari-dhurala-and-jhimma-win-big-331918.html',
+  sadhiLaunch:
+    'https://maharashtratimes.com/entertainment/entertainment-news/television-news/star-pravah-new-serial-sadhi-mansa-promo-out-starring-shivani-baokar-and-akash-nalawade/articleshow/107622233.cms',
 }
 
 export const studio = {
@@ -136,6 +140,54 @@ export const works = [
   },
 ]
 
+export const appearances = [
+  {
+    slug: 'mata-sanman-2022',
+    year: '2022',
+    title: 'MATA Sanman',
+    titleMr: 'मटा सन्मान',
+    place: 'Kalidas Auditorium, Mumbai',
+    body: 'Best Supporting Actor for Sahkutumb Sahaparivar (Pashya) at the 2022 MATA Sanman.',
+    href: links.mataSanman,
+    image: '/images/akash-vintage.jpg',
+    imageAlt: 'Akash Nalawade in a formal portrait by Nilesh Bramhane',
+  },
+  {
+    slug: 'parivar-puraskar-2022',
+    year: '2022',
+    title: 'Star Pravah Parivar Puraskar',
+    titleMr: 'स्टार प्रवाह परिवार पुरस्कार',
+    place: 'Star Pravah',
+    body: 'Shared Best Siblings with his on-screen brothers from the More household.',
+    href: links.sahkutumb,
+    image: '/images/work-sahkutumb.jpg',
+    imageAlt:
+      'Akash Nalawade with Komal Kumbhar in a look from the Sahkutumb Sahaparivar years',
+  },
+  {
+    slug: 'sadhi-manasa-launch',
+    year: '2024',
+    title: 'Lead launch: Sadhi Manasa',
+    titleMr: 'साधी माणसं',
+    place: 'Star Pravah',
+    body: 'Star Pravah announced Sadhi Manasa with Akash as Satya, his first lead, opposite Shivani Baokar.',
+    href: links.sadhiLaunch,
+    image: '/images/work-sadhi-manasa.jpg',
+    imageAlt: 'Akash Nalawade in a look from the Sadhi Manasa years',
+  },
+  {
+    slug: 'temple-visits',
+    year: 'Ongoing',
+    title: 'Temple visits',
+    titleMr: 'दर्शन',
+    place: 'Maharashtra',
+    body: 'Public evenings and temple visits sit beside the serials. Inaugurations and civic functions are arranged through the events desk.',
+    href: site.instagram,
+    image: '/images/akash-temple.jpg',
+    imageAlt: 'Akash Nalawade with folded hands at a temple doorway',
+  },
+]
+
 export const gallery = [
   {
     src: '/images/akash-studio.jpg',
@@ -184,7 +236,7 @@ export const nav = [
 export const pages = [
   { href: '/', title: 'Home', blurb: 'Introduction and selected serials.' },
   { href: '/about/', title: 'About', blurb: 'Biography, photographs, and family.' },
-  { href: '/work/', title: 'Work', blurb: 'Television credits and theatre training.' },
+  { href: '/work/', title: 'Work', blurb: 'Television credits, theatre, and events.' },
   { href: '/terms/', title: 'Terms of use', blurb: 'How this official site may be used.' },
   { href: '/credits/', title: 'Credits', blurb: 'Photographs, sources, and the studio.' },
   { href: '/sitemap/', title: 'Sitemap', blurb: 'A map of every public page.' },

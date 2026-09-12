@@ -2,6 +2,12 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-09-12 — Events on Work; family panel; public appearances
+
+- What: Moved “Write to Akash” from Home to Work (`#contact`). Off Camera is now a two-column family panel (full photograph + family copy only). Events email sits in a separate Events desk box on About. Added an In public section: MATA Sanman 2022, Star Pravah Parivar Puraskar 2022, Sadhi Manasa launch 2024, and temple visits. No press photographs of ribbon cuttings were found; those bookings are named on the events desk instead.
+- Files: `src/pages/Home.jsx`, `src/pages/About.jsx`, `src/pages/Work.jsx`, `src/components/ContactBand.jsx`, `src/components/Layout.jsx`, `src/data.js`, `src/index.css`, `src/pages/Credits.jsx`
+- Result: Family and bookings no longer mix. Footer Events points to `/work/#contact`.
+
 ## 2026-09-12 — Official footer, family photo, legal pages
 
 - What: Replaced the low-quality couple still with Akash’s family photograph. Removed “independent profile” disclaimers. Added a four-column official footer (explore, site, connect, copyright). New pages: `/terms/`, `/credits/`, `/sitemap/`. Home contact now leads with `an.events.collaboration@gmail.com`. Quiet gold links on Star Pravah, serial Wikipedia pages, Pune, SPPU, IMDb, Instagram, Facebook, and Mandal Softwares.
