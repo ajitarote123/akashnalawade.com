@@ -1,38 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://akashnalawade.com/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-hero.jpg</image:loc>
+      <image:title>Akash Nalawade - Marathi Actor</image:title>
+      <image:caption>Akash Nalawade seated by the sea in denim shirt</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://akashnalawade.com/about/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-studio.jpg</image:loc>
+      <image:title>Akash Nalawade Studio Portrait</image:title>
+      <image:caption>Studio portrait of Akash Nalawade</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-family.jpg</image:loc>
+      <image:title>Akash Nalawade with Family</image:title>
+      <image:caption>Akash Nalawade with his wife Ruchika Dhuri and son Adhiraj</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-beach.jpg</image:loc>
+      <image:title>Akash Nalawade Travel</image:title>
+      <image:caption>Akash Nalawade on the beach</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-vintage.jpg</image:loc>
+      <image:title>Akash Nalawade with Vintage Car</image:title>
+      <image:caption>Akash Nalawade leaning on vintage car, by Nilesh Bramhane</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/akash-temple.jpg</image:loc>
+      <image:title>Akash Nalawade Temple Visit</image:title>
+      <image:caption>Akash Nalawade at a temple doorway</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://akashnalawade.com/work/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/work-sahkutumb.jpg</image:loc>
+      <image:title>Sahkutumb Sahaparivar - Pashya (Akash Nalawade)</image:title>
+      <image:caption>Akash Nalawade with co-star Komal Kumbhar in Sahkutumb Sahaparivar</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akashnalawade.com/images/work-sadhi-manasa.jpg</image:loc>
+      <image:title>Sadhi Manasa - Satya (Akash Nalawade)</image:title>
+      <image:caption>Akash Nalawade as Satya in Star Pravah serial Sadhi Manasa</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://akashnalawade.com/terms/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://akashnalawade.com/credits/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://akashnalawade.com/sitemap/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

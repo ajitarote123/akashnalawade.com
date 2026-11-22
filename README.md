@@ -36,4 +36,4 @@ Progress notes live in [`docs/`](docs/) (`DONE.md`, `TARGETS.md`, `TASKS.md`). T
 
 ## Notes
 
-This is the official website of Akash Nalawade. Events: `an.events.collaboration@gmail.com`. Designed and developed by [Mandal Softwares](https://software.mandal.one/).
+This is the official website of Akash Nalawade. Events: `an.events.collaboration@gmail.com`. Designed and developed by [Etora Web Studio](https://etora.site/).

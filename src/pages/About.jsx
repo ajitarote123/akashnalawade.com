@@ -1,7 +1,40 @@
+import { useCallback, useEffect, useState } from 'react'
 import Ext from '../components/Ext'
 import { appearances, facts, gallery, links, site, timeline } from '../data'
 
 export default function About() {
+  const [activeImageIndex, setActiveImageIndex] = useState(null)
+
+  const closeLightbox = useCallback(() => {
+    setActiveImageIndex(null)
+  }, [])
+
+  const showNext = useCallback(() => {
+    setActiveImageIndex((prev) => (prev + 1) % gallery.length)
+  }, [])
+
+  const showPrev = useCallback(() => {
+    setActiveImageIndex((prev) => (prev - 1 + gallery.length) % gallery.length)
+  }, [])
+
+  useEffect(() => {
+    if (activeImageIndex === null) return
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowRight') showNext()
+      if (e.key === 'ArrowLeft') showPrev()
+    }
+
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [activeImageIndex, closeLightbox, showNext, showPrev])
   return (
     <>
       <section className="page-hero about-split">
@@ -56,16 +89,40 @@ export default function About() {
           <p>Photographs from his own collection.</p>
         </div>
         <div className="gallery">
-          {gallery.map((shot) => (
-            <figure key={shot.src}>
-              <img
-                className={`pose-${shot.pose}`}
-                src={shot.src}
-                alt={shot.alt}
-                width="800"
-                height="1000"
-                loading="lazy"
-              />
+          {gallery.map((shot, index) => (
+            <figure
+              key={shot.src}
+              className="gallery-item"
+              role="button"
+              tabIndex={0}
+              aria-label={`View full portrait: ${shot.caption}`}
+              onClick={() => setActiveImageIndex(index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setActiveImageIndex(index)
+                }
+              }}
+            >
+              <div className="gallery-frame">
+                <img
+                  className={`pose-${shot.pose}`}
+                  src={shot.src}
+                  alt={shot.alt}
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  style={shot.objectPosition ? { objectPosition: shot.objectPosition } : undefined}
+                />
+                <span className="gallery-zoom-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </span>
+              </div>
               <figcaption>{shot.caption}</figcaption>
             </figure>
           ))}
@@ -155,6 +212,68 @@ export default function About() {
           <a href={site.emailHref}>{site.email}</a>.
         </p>
       </section>
+
+      {activeImageIndex !== null && (
+        <div
+          className="lightbox-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Portrait Viewer"
+          onClick={closeLightbox}
+        >
+          <button
+            type="button"
+            className="lightbox-btn lightbox-close"
+            onClick={closeLightbox}
+            aria-label="Close portrait viewer"
+          >
+            ✕
+          </button>
+
+          <button
+            type="button"
+            className="lightbox-btn lightbox-nav lightbox-prev"
+            onClick={(e) => {
+              e.stopPropagation()
+              showPrev()
+            }}
+            aria-label="Previous portrait"
+          >
+            ‹
+          </button>
+
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              className="lightbox-img"
+              src={gallery[activeImageIndex].src}
+              alt={gallery[activeImageIndex].alt}
+            />
+            <div className="lightbox-meta">
+              <span className="lightbox-caption">
+                {gallery[activeImageIndex].caption}
+              </span>
+              <span className="lightbox-counter">
+                {activeImageIndex + 1} of {gallery.length}
+              </span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            className="lightbox-btn lightbox-nav lightbox-next"
+            onClick={(e) => {
+              e.stopPropagation()
+              showNext()
+            }}
+            aria-label="Next portrait"
+          >
+            ›
+          </button>
+        </div>
+      )}
     </>
   )
 }

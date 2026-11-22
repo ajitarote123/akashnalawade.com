@@ -35,13 +35,16 @@ export const links = {
 }
 
 export const studio = {
-  name: 'Mandal Softwares',
-  url: 'https://software.mandal.one/',
-  email: 'mandalsoftwares@gmail.com',
-  emailHref: 'mailto:mandalsoftwares@gmail.com',
-  phone: '+91 86525 51424',
-  phoneHref: 'tel:+918652551424',
-  whatsapp: 'https://wa.me/918652551424',
+  name: 'Etora Web Studio',
+  url: 'https://etora.site/',
+  email: 'contact@etora.site',
+  emailHref: 'mailto:contact@etora.site',
+  phone: '+91 83 29 77 80 57',
+  phoneHref: 'tel:+918329778057',
+  whatsapp: 'https://wa.me/918329778057',
+  instagram: 'https://www.instagram.com/etora.site/',
+  instagramHandle: '@etora.site',
+  logo: '/images/etora-studio-icon.svg',
 }
 
 export const facts = [
@@ -165,36 +168,42 @@ export const gallery = [
     alt: 'Studio portrait of Akash Nalawade in a red shirt and black trousers',
     caption: 'Studio',
     pose: 'full',
+    objectPosition: 'center 16%',
   },
   {
     src: '/images/akash-beach.jpg',
     alt: 'Akash Nalawade on a beach in a white shirt and red cap',
     caption: 'Travel',
     pose: 'full',
+    objectPosition: 'center 18%',
   },
   {
     src: '/images/akash-car.jpg',
     alt: 'Akash Nalawade standing beside a red car',
     caption: 'In the city',
     pose: 'wide',
+    objectPosition: '64% 28%',
   },
   {
     src: '/images/akash-vintage.jpg',
     alt: 'Akash Nalawade leaning on a vintage white car',
     caption: 'Nilesh Bramhane',
     pose: 'full',
+    objectPosition: '45% 20%',
   },
   {
     src: '/images/akash-temple.jpg',
     alt: 'Akash Nalawade with folded hands at a temple doorway',
     caption: 'Temple visit',
     pose: 'tall',
+    objectPosition: 'center 22%',
   },
   {
     src: '/images/akash-selfie.jpg',
     alt: 'Akash Nalawade in glasses in a car',
     caption: 'On the road',
     pose: 'tall',
+    objectPosition: 'center 25%',
   },
 ]
 

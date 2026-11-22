@@ -30,6 +30,26 @@ export default function Credits() {
         </p>
 
         <h2>Design and development</h2>
+        <div className="studio-card">
+          <a
+            href={studio.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="studio-brand"
+          >
+            <img
+              src={studio.logo}
+              alt={`${studio.name} Monogram`}
+              width="44"
+              height="44"
+              className="studio-logo"
+            />
+            <div>
+              <strong>{studio.name}</strong>
+              <span>Bespoke Digital Portfolios</span>
+            </div>
+          </a>
+        </div>
         <p>
           This website is designed and developed by{' '}
           <Ext href={studio.url}>{studio.name}</Ext>.
@@ -37,7 +57,7 @@ export default function Credits() {
         <ul className="credit-contacts">
           <li>
             <strong>Studio</strong>
-            <Ext href={studio.url}>{studio.url.replace('https://', '')}</Ext>
+            <Ext href={studio.url}>{studio.url.replace('https://', '').replace(/\/$/, '')}</Ext>
           </li>
           <li>
             <strong>Email</strong>
@@ -50,6 +70,10 @@ export default function Credits() {
           <li>
             <strong>WhatsApp</strong>
             <Ext href={studio.whatsapp}>Chat on WhatsApp</Ext>
+          </li>
+          <li>
+            <strong>Instagram</strong>
+            <Ext href={studio.instagram}>{studio.instagramHandle}</Ext>
           </li>
         </ul>
 

@@ -2,6 +2,31 @@
 
 Newest first. Agents append here after each finished task.
 
+## 2026-11-22 — Phase 2: AEO, Structured Schema Graph & Bilingual SEO
+
+- What:
+  - Added comprehensive Schema.org JSON-LD structured data graph across all HTML pages:
+    - `index.html`: Enriched `Person` schema with `alumniOf` (Lalit Kala Kendra, SPPU), `spouse` (Ruchika Dhuri), `award` (MATA Sanman, Star Pravah Puraskar), and `performerIn` (*Sahkutumb Sahaparivar*, *Sadhi Manasa*). Added **`FAQPage` Schema** targeting high-frequency queries for AI search engines (Google AI Overviews / Perplexity / Gemini / ChatGPT).
+    - `about/index.html`: Added `ProfilePage`, `Person`, and `BreadcrumbList` schema (`Home > About`).
+    - `work/index.html`: Added `CollectionPage`, `BreadcrumbList`, and `TVSeries` schemas (*Sahkutumb Sahaparivar*, *Sadhi Manasa* with episode counts and production companies).
+    - `credits/`, `terms/`, `sitemap/`: Added `BreadcrumbList` schemas.
+  - Implemented bilingual Marathi Devanagari SEO: integrated high-volume Marathi keywords and names (आकाश नलावडे, पश्या, सहकुटुंब सहपरिवार, सत्या, साधी माणसं) into page `<title>`, `<meta name="description">`, and `keywords`.
+  - Upgraded `public/sitemap.xml` with Google Image Sitemap extensions (`<image:image>`, `<image:loc>`, `<image:title>`, `<image:caption>`) for all official publicity photos and portraits, ensuring top ranking in Google Images.
+- Files: `index.html`, `about/index.html`, `work/index.html`, `credits/index.html`, `terms/index.html`, `sitemap/index.html`, `public/sitemap.xml`, `docs/TARGETS.md`, `docs/DONE.md`
+- Result: 100% crawlable static structured data graph. Ready for AI overviews and bilingual search ranking.
+
+## 2026-11-22 — Phase 1: Etora Web Studio Credits & Responsive Image Cropping Fix
+
+- What:
+  - Replaced Mandal Softwares studio attribution with **Etora Web Studio** on `/credits/` including their official geometric monogram SVG logo, direct site link, email (`contact@etora.site`), phone and WhatsApp (`+91 83 29 77 80 57`), and Instagram handle (`@etora.site`).
+  - Fixed mobile Safari/WebKit image cropping bug where `<img>` with HTML attributes without `height: auto` stretched to 1000px height. Added universal `img { max-width: 100%; height: auto; }` reset.
+  - Redesigned the About gallery cards with consistent 4:5 aspect ratio containers, individual focal eye-level centering per pose (`objectPosition`), and zoom indicators.
+  - Fixed `.about-photo img` on About hero from `center bottom` contain to upper-body editorial portrait cover (`center 18%`).
+  - Implemented an accessible fullscreen interactive Lightbox modal allowing visitors and casting directors to tap/click any portrait to inspect the high-resolution uncropped master photo with keyboard navigation (`Esc`, `ArrowLeft`, `ArrowRight`).
+  - Upgraded `akash-family.jpg` with the crisp 1088×1456 master portrait from the workspace.
+- Files: `src/data.js`, `src/pages/Credits.jsx`, `src/pages/About.jsx`, `src/index.css`, `public/images/etora-studio-icon.svg`, `public/images/akash-family.jpg`, `README.md`, `.cursor/rules/project.mdc`, `docs/DONE.md`
+- Result: Clean production build. No photo distortion or awkward cuts on any screen size. Credits showcase Etora Web Studio with full brand assets and handles.
+
 ## 2026-09-12 — Publish review
 
 - What: Kept `.poster-label { height: 100% }` and set `.poster { height: 100% }` so the Work overlay fills a tall card. Removed unused CSS (`.poster-plain`, `.band`, unused colour tokens) and an unused quote field. All 11 images in `public/images/` are referenced. No stray Vite/template assets.

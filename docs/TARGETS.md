@@ -18,10 +18,11 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 
 ## SEO
 
-- [x] Canonical URLs on all three HTML entries (`https://akashnalawade.com/…`)
+- [x] Canonical URLs on all HTML entries (`https://akashnalawade.com/…`)
 - [x] Open Graph + Twitter card tags + a dedicated `og` image (1200×630)
-- [x] `public/robots.txt` and `public/sitemap.xml`
-- [x] JSON-LD Person (name, job, sameAs Instagram, known works)
+- [x] `public/robots.txt` and `public/sitemap.xml` (with Google Image Sitemap extensions)
+- [x] Comprehensive JSON-LD Graph across all pages: Person, ProfilePage, CollectionPage, TVSeries, Role, BreadcrumbList, and FAQPage (AEO)
+- [x] Bilingual Marathi Devanagari SEO keywords in page titles and meta tags
 - [x] Semantic heading order (one `h1` per page; serial titles not competing)
 - [ ] `hreflang` or in-page Marathi/English if a language toggle is added
 - [x] Descriptive `alt` on any real photos; do not use empty decorative photos as content

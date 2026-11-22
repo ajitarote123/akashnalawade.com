@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Etora Studio monogram icon</title>
+  <desc id="desc">The original geometric E monogram and subtle open-frame accent, centered on a square canvas.</desc>
+  <rect width="512" height="512" rx="110" fill="#FFFFFF"/>
+  <g transform="translate(-618.4 -80.8) scale(2.4)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M432 62 H335 Q300 62 300 97 V168 Q300 203 335 203 H430 M335 132 H407 M335 168 H430" stroke="#222321" stroke-width="13"/>
+    <path d="M286 82 V185 Q286 218 319 218 H443" stroke="#222321" stroke-width="2.5" opacity=".55"/>
+  </g>
+</svg>
