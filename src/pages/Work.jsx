@@ -1,6 +1,6 @@
 import ContactBand from '../components/ContactBand'
 import Ext from '../components/Ext'
-import { links, site, works } from '../data'
+import { films, links, site, works } from '../data'
 
 export default function Work() {
   return (
@@ -10,12 +10,13 @@ export default function Work() {
         <h1>Selected work</h1>
         <p className="lede lede-mr" lang="mr">
           दूरचित्रवाणीवर पदार्पण पश्या म्हणून; नंतर सत्या ही मुख्य भूमिका.
-          दैनंदिन मालिकांपूर्वी: मराठी नाटके, प्रायोगिक रंगभूमी आणि जाहिराती.
+          चित्रपटामध्ये ‘रिवणावायली’. मालिकांपूर्वी: मराठी नाटके, प्रायोगिक
+          रंगभूमी आणि जाहिराती.
         </p>
         <p className="lede">
-          Television debut as Pashya, then the lead as Satya. Before the
-          dailies: Marathi theatre, experimental plays, and commercials.
-          Full listing also on{' '}
+          Television breakthrough as Pashya, lead role as Satya, and feature
+          film appearance in <em>Rivanawayali</em>. Before the dailies: Marathi
+          theatre, experimental plays, and commercials. Full listing also on{' '}
           <Ext href={site.imdb}>IMDb</Ext>.
         </p>
       </section>
@@ -71,6 +72,62 @@ export default function Work() {
                 </li>
               </ul>
               <p className="note">{show.note}</p>
+            </div>
+          </article>
+        ))}
+
+        {films.map((film) => (
+          <article className="work-block" key={film.slug} id={film.slug}>
+            <div className="poster">
+              <img
+                src={film.image}
+                alt={film.imageAlt}
+                width="1200"
+                height="1500"
+                loading="lazy"
+              />
+              <div className="poster-label">
+                <span>
+                  Feature film · {film.releaseDate.split(' ').slice(-1)[0]}
+                </span>
+                <strong lang="mr">{film.titleMr}</strong>
+              </div>
+            </div>
+            <div className="work-copy">
+              <p className="kicker">
+                {film.href ? (
+                  <Ext href={film.href}>{film.title}</Ext>
+                ) : (
+                  film.title
+                )}
+              </p>
+              <h2 lang="mr">{film.roleMr}</h2>
+              <p className="role">{film.role}</p>
+              <p>{film.summary}</p>
+              <ul className="chips">
+                {film.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <ul className="detail-list">
+                <li>
+                  <strong>Released</strong>
+                  <span>{film.releaseDate}</span>
+                </li>
+                <li>
+                  <strong>Director</strong>
+                  <span>{film.director}</span>
+                </li>
+                <li>
+                  <strong>Banner</strong>
+                  <span>{film.production}</span>
+                </li>
+                <li>
+                  <strong>Ensemble</strong>
+                  <span>{film.costars}</span>
+                </li>
+              </ul>
+              <p className="note">{film.note}</p>
             </div>
           </article>
         ))}

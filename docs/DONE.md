@@ -2,7 +2,35 @@
 
 Newest first. Agents append here after each finished task.
 
-## 2026-11-22 — Phase 2: AEO, Structured Schema Graph & Bilingual SEO
+## 2026-11-23 — Etora Web Studio Footer Credit
+
+- What:
+  - Added official studio credit to the site footer in `Layout.jsx` opposite the copyright statement: `"This website is designed and developed by Etora Web Studio."` linking to `https://etora.site/`.
+  - Refined footer styling in `src/index.css`:
+    - Set `align-items: baseline` on `.footer-bar` so the copyright and studio credit align on the exact same typographic baseline on large screens.
+    - Isolated touch-target sizing (`min-height: 40px` / `44px`, `width: 100%`) strictly to `.footer-links a` so that `.footer-bar a` remains natural inline text without line-height distortion.
+    - Set `.footer-bar` in mobile to column layout with `text-align: center`, `align-items: center`, and `justify-content: center` so the entire credit sentence and Etora link center with the copyright line.
+- Files: `src/components/Layout.jsx`, `src/index.css`, `.cursor/rules/project.mdc`, `docs/DONE.md`
+- Result: Perfectly aligned and centered studio credit across desktop and mobile screens.
+
+## 2026-11-22 — Phase 3: SSG Prerendering, Rivanawayali Film Credit & FAQ Accordion
+
+- What:
+  - **Build-Time SSG Prerendering**: Implemented `scripts/prerender.mjs` using Vite's SSR module loader and `react-dom/server` (`renderToString`). Automatically prerenders all 6 multi-page HTML entries (`/`, `/about/`, `/work/`, `/terms/`, `/credits/`, `/sitemap/`) into full static HTML inside `<div id="root">`. Updated `src/main.jsx` to use `hydrateRoot` (with fallback) for zero-layout-shift client hydration. Output is 100% static, fast, and SEO-ready for shared Linux hosting without Node.js runtime.
+  - **Rivanawayali (रिवणावायली) Feature Film Integration**:
+    - Added the 2022 Marathi feature film *Rivanawayali* (directed by Dr. Dineshkumar Kadam, screenplay by Sanjay Pawar) as a distinct filmography entry.
+    - Added official theatrical poster asset (`public/images/work-rivanawayali.jpg`) and BookMyShow citation.
+    - Updated `Work.jsx` with a dedicated feature film block for Rajesh Deshpande (राजेश देशपांडे) alongside veteran actors Shashank Shende and Devika Daftardar, without overshadowing his signature TV serials (*Sahkutumb Sahaparivar* and *Sadhi Manasa*).
+    - Updated `timeline` and `appearances` in `src/data.js` and `About.jsx`.
+    - Added Schema.org `Movie` entity in `work/index.html`, `index.html`, and `about/index.html`.
+  - **Visible FAQ Section (Google Compliance)**:
+    - Added an accessible, responsive FAQ accordion section (`<details>`/`<summary>`) on `Home.jsx` styled in `src/index.css` to visually display the 5 questions and answers matching the `FAQPage` schema word-for-word, complying strictly with Google Search Central guidelines.
+    - Centralized FAQ content in `src/data.js` as single source of truth.
+  - **Schema Graph Polish**:
+    - Added `WebPage` schema node to `index.html` with `mainEntity` referencing `#person`.
+    - Added `mainEntity: { "@id": "https://akashnalawade.com/#person" }` to `ProfilePage` in `about/index.html`.
+- Files: `scripts/prerender.mjs`, `src/main.jsx`, `src/data.js`, `src/pages/Home.jsx`, `src/pages/Work.jsx`, `src/pages/About.jsx`, `src/pages/Credits.jsx`, `src/index.css`, `package.json`, `index.html`, `about/index.html`, `work/index.html`, `public/images/work-rivanawayali.jpg`, `docs/TARGETS.md`, `docs/DONE.md`
+- Result: 0 lint errors, build succeeds cleanly, full HTML pre-rendered in `dist/`, film and FAQ gracefully integrated.
 
 - What:
   - Added comprehensive Schema.org JSON-LD structured data graph across all HTML pages:

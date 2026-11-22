@@ -1,5 +1,5 @@
 import Ext from '../components/Ext'
-import { links, site, works } from '../data'
+import { faqs, links, site, works } from '../data'
 
 export default function Home() {
   return (
@@ -16,13 +16,13 @@ export default function Home() {
           <h1 lang="mr">आकाश नलावडे</h1>
           <p className="english-name">Akash Nalawade</p>
           <p className="lede lede-mr" lang="mr">
-            मराठी दूरचित्रवाणी अभिनेता. स्टार प्रवाहाच्या ‘सहकुटुंब
+            मराठी दूरचित्रवाणी व चित्रपट अभिनेता. स्टार प्रवाहाच्या ‘सहकुटुंब
             सहपरिवार’मध्ये पश्या म्हणून घराघरात पोहोचले; नंतर ‘साधी
             माणसं’मध्ये सत्या ही मुख्य भूमिका साकारली. पुण्यात नाट्यशिक्षण
             घेतलेला कलाकार.
           </p>
           <p className="lede">
-            Marathi television actor known to households as Pashya in{' '}
+            Marathi television and film actor known to households as Pashya in{' '}
             <Ext href={links.sahkutumb}>Sahkutumb Sahaparivar</Ext>, and later
             as Satya, the lead of{' '}
             <Ext href={links.sadhiManasa}>Sadhi Manasa</Ext>. A Pune-trained
@@ -72,7 +72,7 @@ export default function Home() {
           <p>
             Two{' '}
             <Ext href={links.starPravah}>Star Pravah</Ext> serials that
-            defined his public image.
+            defined his public image, alongside Marathi cinema.
           </p>
         </div>
         <div className="cards">
@@ -101,6 +101,12 @@ export default function Home() {
             </a>
           ))}
         </div>
+        <p className="cards-subnote">
+          Also on the big screen in the Marathi social drama{' '}
+          <a href="/work/#rivanawayali">
+            <em>Rivanawayali</em> (रिवणावायली) →
+          </a>
+        </p>
       </section>
 
       <section className="quote-band">
@@ -109,6 +115,28 @@ export default function Home() {
           homes. I hope Satya finds the same love.”
         </blockquote>
         <cite>Akash Nalawade, on taking the lead in Sadhi Manasa</cite>
+      </section>
+
+      <section className="section faq-section" id="faq">
+        <div className="section-head">
+          <h2>Frequently asked questions</h2>
+          <p>
+            Common questions about Akash Nalawade’s career, background, and contact details.
+          </p>
+        </div>
+        <div className="faq-list">
+          {faqs.map((faq, index) => (
+            <details className="faq-item" key={faq.question} open={index === 0}>
+              <summary className="faq-question">
+                <span>{faq.question}</span>
+                <span className="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div className="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
       </section>
     </>
   )

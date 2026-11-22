@@ -21,7 +21,10 @@ The site is final when a phone-sized browser and a crawler can both use it well:
 - [x] Canonical URLs on all HTML entries (`https://akashnalawade.com/…`)
 - [x] Open Graph + Twitter card tags + a dedicated `og` image (1200×630)
 - [x] `public/robots.txt` and `public/sitemap.xml` (with Google Image Sitemap extensions)
-- [x] Comprehensive JSON-LD Graph across all pages: Person, ProfilePage, CollectionPage, TVSeries, Role, BreadcrumbList, and FAQPage (AEO)
+- [x] Comprehensive JSON-LD Graph across all pages: Person, ProfilePage, CollectionPage, TVSeries, Movie, Role, BreadcrumbList, and FAQPage (AEO)
+- [x] Visible FAQ accordion section on Home matching FAQPage schema (Google compliance)
+- [x] Build-time SSG prerendering of all HTML entry points (`dist/` contains full static HTML for crawlers and shared hosting)
+- [x] Feature film credit: *Rivanawayali* (2022) with theatrical poster and Schema.org `Movie`
 - [x] Bilingual Marathi Devanagari SEO keywords in page titles and meta tags
 - [x] Semantic heading order (one `h1` per page; serial titles not competing)
 - [ ] `hreflang` or in-page Marathi/English if a language toggle is added

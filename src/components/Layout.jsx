@@ -1,4 +1,4 @@
-import { nav, site } from '../data'
+import { nav, site, studio } from '../data'
 import Ext from './Ext'
 
 export default function Layout({ page, children }) {
@@ -87,6 +87,10 @@ export default function Layout({ page, children }) {
         <div className="footer-bar">
           <p>
             © {year} {site.name}. All rights reserved.
+          </p>
+          <p className="footer-credit">
+            This website is designed and developed by{' '}
+            <Ext href={studio.url}>{studio.name}</Ext>.
           </p>
         </div>
       </footer>

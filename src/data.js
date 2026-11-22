@@ -1,8 +1,8 @@
 export const site = {
   name: 'Akash Nalawade',
   nameMr: 'आकाश नलावडे',
-  tagline: 'Marathi television actor',
-  taglineMr: 'मराठी दूरचित्रवाणी अभिनेता',
+  tagline: 'Marathi television and film actor',
+  taglineMr: 'मराठी दूरचित्रवाणी व चित्रपट अभिनेता',
   url: 'https://akashnalawade.com',
   instagram: 'https://www.instagram.com/akash_nalawade_official/',
   instagramHandle: '@akash_nalawade_official',
@@ -32,6 +32,9 @@ export const links = {
     'https://www.filmibeat.com/marathi-movies/news/mata-sanman-2022-winners-list-out-ankush-chaudhari-dhurala-and-jhimma-win-big-331918.html',
   sadhiLaunch:
     'https://maharashtratimes.com/entertainment/entertainment-news/television-news/star-pravah-new-serial-sadhi-mansa-promo-out-starring-shivani-baokar-and-akash-nalawade/articleshow/107622233.cms',
+  rivanawayaliBms:
+    'https://in.bookmyshow.com/movies/sathupally/rivanawayali/ET00326245',
+  rivanawayaliTrailer: 'https://www.youtube.com/watch?v=Lxm0MdVyMpw',
 }
 
 export const studio = {
@@ -74,6 +77,11 @@ export const timeline = [
     year: '2020',
     title: 'Television debut as Pashya',
     body: 'Cast in Star Pravah’s family drama Sahkutumb Sahaparivar as Prashant “Pashya” More. The role made him a household name across Maharashtra.',
+  },
+  {
+    year: '2022',
+    title: 'Feature film: Rivanawayali',
+    body: 'Theatrical release of the Marathi social drama Rivanawayali (रिवणावायली) on 8 April 2022, directed by Dr. Dineshkumar Kadam, where Akash played Rajesh Deshpande alongside Shashank Shende and Devika Daftardar.',
   },
   {
     year: '2022–23',
@@ -141,7 +149,45 @@ export const works = [
   },
 ]
 
+export const films = [
+  {
+    slug: 'rivanawayali',
+    title: 'Rivanawayali',
+    titleMr: 'रिवणावायली',
+    role: 'Rajesh Deshpande',
+    roleMr: 'राजेश देशपांडे',
+    type: 'Feature Film',
+    typeMr: 'चित्रपट',
+    releaseDate: '8 April 2022',
+    releaseDateIso: '2022-04-08',
+    runtime: '1 hr 58 mins',
+    certificate: 'UA',
+    director: 'Dr. Dineshkumar Kadam',
+    directorMr: 'डॉ. दिनेशकुमार कदम',
+    screenplay: 'Sanjay Pawar (Story: Prof. Rajan Gavas)',
+    production: 'Pranali Movies Production',
+    costars: 'Shashank Shende, Devika Daftardar, Akshaya Gurav, Pratap Sonawale',
+    href: links.rivanawayaliBms,
+    image: '/images/work-rivanawayali.jpg',
+    imageAlt: 'Theatrical poster of Marathi feature film Rivanawayali',
+    summary:
+      'An independent Marathi social drama questioning ingrained community traditions and family conflicts. Akash portrayed Rajesh Deshpande in an ensemble led by veteran actors Shashank Shende and Devika Daftardar.',
+    highlights: [
+      'Theatrical feature film',
+      'Role of Rajesh Deshpande',
+      'Directed by Dr. Dineshkumar Kadam',
+    ],
+    note: 'Released theatrically on 8 April 2022. Screenplay by Sanjay Pawar based on a story by Prof. Rajan Gavas.',
+  },
+]
+
 export const appearances = [
+  {
+    year: '2022',
+    title: 'Rivanawayali (रिवणावायली)',
+    body: 'Theatrical feature film release. Akash played Rajesh Deshpande under the direction of Dr. Dineshkumar Kadam.',
+    href: links.rivanawayaliBms,
+  },
   {
     year: '2022',
     title: 'MATA Sanman',
@@ -220,4 +266,37 @@ export const pages = [
   { href: '/terms/', title: 'Terms of use', blurb: 'How this official site may be used.' },
   { href: '/credits/', title: 'Credits', blurb: 'Photographs, sources, and the studio.' },
   { href: '/sitemap/', title: 'Sitemap', blurb: 'A map of every public page.' },
+]
+
+export const faqs = [
+  {
+    question: 'Who is Akash Nalawade?',
+    questionMr: 'आकाश नलावडे कोण आहेत?',
+    answer:
+      'Akash Nalawade (आकाश नलावडे) is a prominent Marathi television actor born on 8 September 1991 in Pune, Maharashtra. He trained in acting at Lalit Kala Kendra, SPPU, and rose to fame as Prashant \'Pashya\' More in Sahkutumb Sahaparivar, later headlining Sadhi Manasa as Satya on Star Pravah.',
+  },
+  {
+    question: 'What was Akash Nalawade\'s debut Marathi serial?',
+    questionMr: 'आकाश नलावडे यांची पहिली मराठी मालिका कोणती होती?',
+    answer:
+      'Akash Nalawade made his television debut in 2020 on Star Pravah\'s popular daily drama Sahkutumb Sahaparivar (सहकुटुंब सहपरिवार) as Prashant \'Pashya\' More, which ran for over 1,000 episodes.',
+  },
+  {
+    question: 'Who is Akash Nalawade\'s wife?',
+    questionMr: 'आकाश नलावडे यांच्या पत्नी कोण आहेत?',
+    answer:
+      'Akash Nalawade is married to actress and model Ruchika Dhuri. The couple married on 18 March 2023.',
+  },
+  {
+    question: 'Where did Akash Nalawade receive acting training?',
+    questionMr: 'आकाश नलावडे यांनी अभिनयाचे शिक्षण कोठे घेतले?',
+    answer:
+      'Akash received formal theatre and acting training at Lalit Kala Kendra (Centre for Performing Arts), Savitribai Phule Pune University (SPPU), Pune.',
+  },
+  {
+    question: 'How can I contact Akash Nalawade for events and brand collaborations?',
+    questionMr: 'कार्यक्रम आणि ब्रँड सहकार्यासाठी संपर्क कसा करावा?',
+    answer:
+      'For public appearances, celebrity judging, brand endorsements, and collaborations, official inquiries can be emailed to an.events.collaboration@gmail.com or sent via Instagram @akash_nalawade_official.',
+  },
 ]

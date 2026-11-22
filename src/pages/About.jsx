@@ -49,7 +49,7 @@ export default function About() {
         <div>
           <p className="kicker">Biography</p>
           <h1 lang="mr">आकाश नलावडे</h1>
-          <p className="english-name">From Pune theatre to Marathi television</p>
+          <p className="english-name">From Pune theatre to television and cinema</p>
           <p className="lede lede-mr" lang="mr">
             आकाश नलावडे यांचा जन्म ८ सप्टेंबर १९९१ रोजी पुण्यात झाला.
             चित्रपटसृष्टीतील कुटुंबाचा आधार नसताना त्यांनी ललित कला केंद्रात
